@@ -1,0 +1,13 @@
+@import './../../assets/scss/variables';
+
+.side-panel-border{
+    position: absolute;
+    left: 0;
+    top: $topbar-height;
+    margin-top: 20px;
+    width: $sidebar-width;
+    height: 100%;
+    box-shadow: $box-shadow;
+
+    
+}

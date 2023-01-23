@@ -1,0 +1,14 @@
+@import './../assets/scss/variables';
+.main-content {
+    position: absolute;
+    left: $sidebar-width;
+    top: $topbar-height;
+    height: 100%;
+    width: calc(100% - #{$sidebar-width});
+   
+    .main-content-box{
+        margin: 20px;
+        box-shadow: $box-shadow;
+        height: 100%;
+    }
+}

@@ -1,0 +1,114 @@
+<div class="container page-header-container">
+    <div class="row">
+        <div class="col">
+            <h5 class="page-tittle">{{mysimulator.name}}</h5>
+            <p class="page-sub-tittle">Quantidade<span class="badge bg-success">{{mysimulator.codes.length}}</span></p>
+        </div>
+        <div class="col">
+            <ul class="code-list">
+                <li>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Choose a date</mat-label>
+                        <input  matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                  </li>
+                <li>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Codigo...</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let element of mysimulator.codes">{{element}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container page-body-container">
+    <div class="row">
+        <div class="col">
+            <div class="subpanel-tittle-container"><img src="./imgs/icons/line-start.png"><span>Pulsos Carotideos</span>
+            </div>
+            <ul class="pulsos-carotideos-list">
+                <li>Direito {{ rightInputValue }}
+                    <mat-form-field appearance="outline">
+                        <mat-label>Escolha...</mat-label>
+                        <mat-select [(ngModel)]="rightInputValue">
+                          <mat-option value="1">Parou de Funcionar</mat-option>
+                          <mat-option value="2">Pulso Fraco</mat-option>
+                          <mat-option value="3">Nenhuma Falha</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </li>
+                <li>Esquerdo<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected="">Escolha...</option>
+                        <option value="1">Parou de Funcionar</option>
+                        <option value="2">Pulso Fraco</option>
+                        <option value="3">Nenhuma Falha</option>
+                    </select></li>
+            </ul>
+            <div class="subpanel-tittle-container"><img src="./imgs/icons/line-start.png"><span>Pulsos Carotideos</span>
+            </div>
+            <ul class="pulsos-radiais-list">
+                <li>Radial Direito<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected="">Escolha...</option>
+                        <option value="1">Parou de Funcionar</option>
+                        <option value="2">Pulso Fraco</option>
+                        <option value="3">Nenhuma Falha</option>
+                    </select></li>
+                <li>Braqueal Direito<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected="">Escolha...</option>
+                        <option value="1">Parou de Funcionar</option>
+                        <option value="2">Pulso Fraco</option>
+                        <option value="3">Nenhuma Falha</option>
+                    </select></li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="general-list">
+                <div class="subpanel-tittle-container"><img src="./imgs/icons/line-start.png"><span>Geral
+                        Settings</span></div>
+                <li><span>Incursões Respiratórias</span><select class="custom-select mr-sm-2"
+                        id="inlineFormCustomSelect">
+                        <option selected="">Escolha...</option>
+                        <option value="1">Parou de Funcionar</option>
+                        <option value="2">Nenhuma Falha</option>
+                    </select></li>
+                <li><span>Eletrodos para Monitorização</span><select class="custom-select mr-sm-2"
+                        id="inlineFormCustomSelect">
+                        <option selected="">Escolha...</option>
+                        <option value="1">Parou de Funcionar</option>
+                        <option value="2">Faltam eletrodos</option>
+                        <option value="3">Nenhuma Falha</option>
+                    </select></li>
+                <li><span>Bordas de Choque Elétrico</span><select class="custom-select mr-sm-2"
+                        id="inlineFormCustomSelect">
+                        <option selected="">Escolha...</option>
+                        <option value="1">Parou de Funcionar</option>
+                        <option value="2">Pulso Fraco</option>
+                        <option value="3">Nenhuma Falha</option>
+                    </select></li>
+                <li><span>Ausculta Cardiaca</span><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected="">Escolha...</option>
+                        <option value="1">Parou de Funcionar</option>
+                        <option value="2">Pulso Fraco</option>
+                        <option value="3">Nenhuma Falha</option>
+                    </select></li>
+                <li><span>Ausculta Pulmonar</span><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected="">Escolha...</option>
+                        <option value="1">Parou de Funcionar</option>
+                        <option value="2">Pulso Fraco</option>
+                        <option value="3">Nenhuma Falha</option>
+                    </select></li>
+            </ul>
+        </div>
+        <div class="gerar-relatorio-button-container">
+            <button type="button" class="btn btn-outline-secondary" routerLink="/simuladores">Voltar</button>
+            <button type="button" class="btn btn-outline-success" (click)="onSubmit()">Gerar Relatorio</button>
+        </div>
+    </div>
+</div>

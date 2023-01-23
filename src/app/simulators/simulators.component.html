@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-4" *ngFor="let element of data">
+        <div class="card-box">
+            <div class="img-container">
+                <img [src]="element.imgPath" alt="">
+            </div>
+            <div class="button-container">
+                <div class="button-center">
+                  <button type="button" routerLink="/simuladores/{{element.id}}"
+                    class="btn btn-outline-secondary btn-enviar-relatorio">Enviar Relatório
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

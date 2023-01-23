@@ -1,0 +1,32 @@
+.row{
+    padding-top: 70px;
+}
+.col-4{
+    margin-bottom: 25px;
+    
+    .card-box{
+        box-shadow: 2px 0px 11px -3px #888888;
+        border-radius: 4px;
+        //width: 280px;
+        height: 195px;
+        margin-right: 10px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .img-container{
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+
+            img{
+                width: 230px;
+                height: 130px;
+            }
+        }
+    }
+}
+
+
