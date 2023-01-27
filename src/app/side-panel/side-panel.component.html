@@ -2,9 +2,49 @@
     <div class="first-side-panel">
         <span><img src="assets/imgs/icons/arrow-right.png" alt=""> Opções</span>
         <ul class="first-side-menu-list">
-          <li><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a data-bs-toggle="modal" href="#staticBackdrop">Adicionar Simulador</a></li>
+          <li><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a data-bs-toggle="modal" (click)="openDialog()">Adicionar Simulador</a></li>
           <li><img src="assets/imgs/icons/Status-icon.png" alt=""><a href="#">Status Geral Simulador</a></li>
         </ul>
+        <!--MODAL -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Novo Simulador</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-img-container"> Imagem do seu Simulador
+                      <img src="..." class="card-img-top" alt="...">
+                    </p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><input type="file" accept=".jpg, .jpeg, .png"></li>
+                    <li class="list-group-item">Simulador
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>selecione...</option>
+                        <option value="1">SimManALS</option>
+                        <option value="2">SimMan3G</option>
+                        <option value="3">SimuJunior</option>
+                        <option value="4">SimuBabyClassic</option>
+                      </select>
+                    </li>
+                    <li class="list-group-item">Codigo
+                      <input type="text" placeholder=" inserir codigo ...">
+                      <a  id="validationLink" href="#">Validar</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-success">Adicionar</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     <div class="second-side-panel">
         <span><img src="assets/imgs/icons/arrow-right.png" alt=""> Contact Info</span>

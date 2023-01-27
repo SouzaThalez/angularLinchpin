@@ -1,29 +1,34 @@
 <div class="container page-header-container">
     <div class="row">
         <div class="col">
-            <h5 class="page-tittle">{{mysimulator.name}}</h5>
-            <p class="page-sub-tittle">Quantidade<span class="badge bg-success">{{mysimulator.codes.length}}</span></p>
+            <h2 class="page-tittle">{{mysimulator.name}}</h2>
+            <h3 class="page-sub-tittle">
+                Quantidade
+            <span class="badge bg-success">{{mysimulator.codes.length}}</span>
+            </h3>
         </div>
         <div class="col">
             <ul class="code-list">
                 <li>
                     <mat-form-field appearance="outline">
-                        <mat-label>Choose a date</mat-label>
-                        <input  matInput [matDatepicker]="picker">
-                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-label>Escolha uma data..</mat-label>
+                        <input  matInput [matDatepicker]="picker" (dateChange)="gettingDate($event)">
                         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
                   </li>
                 <li>
+                  
                     <mat-form-field appearance="outline">
-                        <mat-label>Codigo...</mat-label>
-                        <mat-select>
-                          <mat-option *ngFor="let element of mysimulator.codes">{{element}}</mat-option>
+                        <mat-label>Escolha o Codigo...</mat-label>
+                        <mat-select [(ngModel)]= "simulatorCode">
+                          <!--The value property is important! -->
+                          <mat-option  *ngFor="let element of mysimulator.codes; let i = index" [value] = "i">{{element}}</mat-option>
                         </mat-select>
                       </mat-form-field>
-                    
+
                 </li>
+                
             </ul>
         </div>
     </div>
@@ -31,84 +36,165 @@
 <div class="container page-body-container">
     <div class="row">
         <div class="col">
-            <div class="subpanel-tittle-container"><img src="./imgs/icons/line-start.png"><span>Pulsos Carotideos</span>
-            </div>
-            <ul class="pulsos-carotideos-list">
-                <li>Direito {{ rightInputValue }}
-                    <mat-form-field appearance="outline">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Pulsos:</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Carotideo Direito </th>
+                    
+                    <td>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Escolha...</mat-label>
+                            <mat-select [(ngModel)]="carotideoDireitoValue">
+                              <mat-option value="1">Parou de Funcionar</mat-option>
+                              <mat-option value="2">Pulso Fraco</mat-option>
+                              <mat-option value="3">Nenhuma Falha</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Carotideo Esquerdo</th>
+                    
+                    <td>
+                        <mat-form-field appearance="outline">
                         <mat-label>Escolha...</mat-label>
-                        <mat-select [(ngModel)]="rightInputValue">
+                        <mat-select [(ngModel)]="carotideoEsquerdoValue">
                           <mat-option value="1">Parou de Funcionar</mat-option>
                           <mat-option value="2">Pulso Fraco</mat-option>
                           <mat-option value="3">Nenhuma Falha</mat-option>
                         </mat-select>
-                      </mat-form-field>
-                </li>
-                <li>Esquerdo<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected="">Escolha...</option>
-                        <option value="1">Parou de Funcionar</option>
-                        <option value="2">Pulso Fraco</option>
-                        <option value="3">Nenhuma Falha</option>
-                    </select></li>
-            </ul>
-            <div class="subpanel-tittle-container"><img src="./imgs/icons/line-start.png"><span>Pulsos Carotideos</span>
-            </div>
-            <ul class="pulsos-radiais-list">
-                <li>Radial Direito<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected="">Escolha...</option>
-                        <option value="1">Parou de Funcionar</option>
-                        <option value="2">Pulso Fraco</option>
-                        <option value="3">Nenhuma Falha</option>
-                    </select></li>
-                <li>Braqueal Direito<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected="">Escolha...</option>
-                        <option value="1">Parou de Funcionar</option>
-                        <option value="2">Pulso Fraco</option>
-                        <option value="3">Nenhuma Falha</option>
-                    </select></li>
-            </ul>
+                        </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Radial direito</th>
+                    <td colspan="2">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Escolha...</mat-label>
+                            <mat-select [(ngModel)]= "radialDireitoValue">
+                              <mat-option value="1">Parou de Funcionar</mat-option>
+                              <mat-option value="2">Pulso Fraco</mat-option>
+                              <mat-option value="3">Nenhuma Falha</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Braqueal direito</th>
+                    <td colspan="2">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Escolha...</mat-label>
+                            <mat-select [(ngModel)] = "braquealDireitoValue">
+                              <mat-option value="1">Parou de Funcionar</mat-option>
+                              <mat-option value="2">Pulso Fraco</mat-option>
+                              <mat-option value="3">Nenhuma Falha</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Aparelho de medir Pressão</th>
+                    <td colspan="2">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Escolha...</mat-label>
+                            <mat-select [(ngModel)] = "manguitoValue">
+                              <mat-option value="1">Parou de Funcionar</mat-option>
+                              <mat-option value="2">Nenhuma Falha</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>  
         </div>
         <div class="col">
-            <ul class="general-list">
-                <div class="subpanel-tittle-container"><img src="./imgs/icons/line-start.png"><span>Geral
-                        Settings</span></div>
-                <li><span>Incursões Respiratórias</span><select class="custom-select mr-sm-2"
-                        id="inlineFormCustomSelect">
-                        <option selected="">Escolha...</option>
-                        <option value="1">Parou de Funcionar</option>
-                        <option value="2">Nenhuma Falha</option>
-                    </select></li>
-                <li><span>Eletrodos para Monitorização</span><select class="custom-select mr-sm-2"
-                        id="inlineFormCustomSelect">
-                        <option selected="">Escolha...</option>
-                        <option value="1">Parou de Funcionar</option>
-                        <option value="2">Faltam eletrodos</option>
-                        <option value="3">Nenhuma Falha</option>
-                    </select></li>
-                <li><span>Bordas de Choque Elétrico</span><select class="custom-select mr-sm-2"
-                        id="inlineFormCustomSelect">
-                        <option selected="">Escolha...</option>
-                        <option value="1">Parou de Funcionar</option>
-                        <option value="2">Pulso Fraco</option>
-                        <option value="3">Nenhuma Falha</option>
-                    </select></li>
-                <li><span>Ausculta Cardiaca</span><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected="">Escolha...</option>
-                        <option value="1">Parou de Funcionar</option>
-                        <option value="2">Pulso Fraco</option>
-                        <option value="3">Nenhuma Falha</option>
-                    </select></li>
-                <li><span>Ausculta Pulmonar</span><select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected="">Escolha...</option>
-                        <option value="1">Parou de Funcionar</option>
-                        <option value="2">Pulso Fraco</option>
-                        <option value="3">Nenhuma Falha</option>
-                    </select></li>
-            </ul>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Gerais:</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Incursões Respiratórias </th>
+                    <td>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Escolha...</mat-label>
+                            <mat-select [(ngModel)] = "incursoesRespValue">
+                              <mat-option value="1">Parou de Funcionar</mat-option>
+                              <mat-option value="2">Nenhuma Falha</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Eletrodos para Monitorização</th>
+                    <td>
+                        <mat-form-field appearance="outline">
+                        <mat-label>Escolha...</mat-label>
+                        <mat-select [(ngModel)] = "eletrodosMonitValue">
+                          <mat-option value="1">Parou de Funcionar</mat-option>
+                          <mat-option value="2">Faltam Eletrodos</mat-option>
+                          <mat-option value="3">Nenhuma Falha</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Bordas de Choque Elétrico</th>
+                    <td colspan="2">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Escolha...</mat-label>
+                            <mat-select [(ngModel)] = "bordasChoqueValue">
+                              <mat-option value="1">Parou de Funcionar</mat-option>
+                              <mat-option value="2">Faltam Bordas</mat-option>
+                              <mat-option value="3">Nenhuma Falha</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ausculta Cardiaca</th>
+                    <td colspan="2">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Escolha...</mat-label>
+                            <mat-select [(ngModel)] = "auscultaCardiacaValue">
+                              <mat-option value="1">Parou de Funcionar</mat-option>
+                              <mat-option value="2">Nenhuma Falha</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ausculta Pulmonar</th>
+                    <td colspan="2">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Escolha...</mat-label>
+                            <mat-select [(ngModel)] = "auscultaPulmonarValue">
+                              <mat-option value="1">Parou de Funcionar</mat-option>
+                              <mat-option value="2">Nenhuma Falha</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                  </tr>
+                </tbody>
+            </table> 
+            
         </div>
-        <div class="gerar-relatorio-button-container">
-            <button type="button" class="btn btn-outline-secondary" routerLink="/simuladores">Voltar</button>
-            <button type="button" class="btn btn-outline-success" (click)="onSubmit()">Gerar Relatorio</button>
+        <div class="gerar-relatorio-btn-container">
+            <div class="btns-relatorio">
+                <button type="button" class="btn btn-outline-secondary" routerLink="/simuladores">Voltar</button>
+                <button type="button" class="btn btn-outline-success" (click)="onSubmit()">Gerar Relatorio</button>
+            </div>
         </div>
     </div>
 </div>

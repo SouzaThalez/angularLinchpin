@@ -9,14 +9,31 @@
     right: 0;
     padding-top: 5px;
     box-shadow: $box-shadow;
-
+    
     .col-4{
         display: inline-flex;
-    }
+        margin-top: 9px;
 
+        .app-burguer{
+            margin-left: 15px;
+            img:hover{
+                cursor: pointer;
+            }
+        }
+        .app-tittle-logo{
+            h4{
+                margin-left: 10px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
     .menu-links{
         float: right;
-        margin-top: -8px;
+        margin-top: 1px;
+        margin-right: 10px;
         list-style: none;
         display: inline-flex;
         font-size: 19px;

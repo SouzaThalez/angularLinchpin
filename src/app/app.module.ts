@@ -16,6 +16,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ModalComponent } from './modal/modal.component';
+import { identifierName } from '@angular/compiler';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,8 @@ import {MatSelectModule} from '@angular/material/select';
     SidePanelComponent,
     TopbarComponent,
     RelatoriosComponent,
-    SimulatorDetailsComponent
+    SimulatorDetailsComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

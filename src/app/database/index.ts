@@ -37,3 +37,18 @@ export const simulatorsData =[
         codes: ['3r3r3','4y4y4','4y4y4','3r3r3','4y4y4','4y4y4','4y4y4','3r3r3','4y4y4']
       }
 ]
+export class formData{
+    simulatorName: string;
+    Code: string;
+    date: string;
+    formvalues: Array<string>;
+
+
+    constructor(){
+      this.simulatorName = '';
+      this.Code = '';
+      this.date= ''; 
+      this.formvalues = [];
+    }
+
+}

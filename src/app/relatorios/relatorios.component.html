@@ -1,14 +1,25 @@
-<p>relatorios works!</p>
+<div class="page-tittle">
+  <h2>Acompanhe seus Relatorios</h2>
+</div>
+<div class="filter">
+    <mat-form-field>
+      <mat-label>Filtrar por Data</mat-label>
+      <mat-select>
+          <mat-option value="antigo">Mais antigo</mat-option>
+          <mat-option value="recente">Mais recente</mat-option>
+      </mat-select>
+    </mat-form-field>
+</div>
 <div class="row">
-    <div class="col-3" *ngFor="let element of relatorios">
+    <div class="col-3" *ngFor="let element of fromLocalStorage; let i = index">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Simulator Name</h5>
-            <p class="card-text">Some example text </p>
+            <h5 class="card-title">{{i}}</h5>
+            <p class="card-text">Download do seu relatorio </p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Codigo: 30218</li>
-            <li class="list-group-item">Data: 10/05/2022</li>
+            <li class="list-group-item">Data abertura: 10/05/2022</li>
           </ul>
           <div class="card-body">
             <span class="pdf-tittle">PDF Download: </span>
