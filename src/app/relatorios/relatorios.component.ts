@@ -11,8 +11,8 @@ import { simulatorsData } from '../database';
 })
 export class RelatoriosComponent implements OnInit{
 
-  fromLocalStorage: [] = [];
- 
+  fromLocalStorage: any [] = [];
+  showContent = false;
 
   ngOnInit(): void {
 
@@ -25,8 +25,12 @@ export class RelatoriosComponent implements OnInit{
       this.fromLocalStorage = JSON.parse(simulatorsV);
 
       for (let index = 0; index < this.fromLocalStorage.length; index++) {
-        const element = this.fromLocalStorage[index];
+        const element = (this.fromLocalStorage[index] as any);
           console.log('fromlocalStorage',element);
+          if(index == 4){
+              this.showContent = true;
+              console.log(index);
+          }
       } 
 
     }

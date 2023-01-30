@@ -5,10 +5,13 @@
     top: $topbar-height;
     height: 100%;
     width: calc(100% - #{$sidebar-width});
-   
+    
     .main-content-box{
         margin: 20px;
-        box-shadow: $box-shadow;
+        margin-left: 5px;
+        box-shadow: $mybox-shadow;
+        border-radius: 15px;
         height: 100%;
+        background-color: #ebebeb;
     }
 }

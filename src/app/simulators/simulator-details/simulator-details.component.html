@@ -1,36 +1,40 @@
+<div class="icon-container">
+  <p>--</p>
+  <!--<img src="\assets\imgs\icons\line-end.png" alt="sws">-->
+</div>
 <div class="container page-header-container">
     <div class="row">
-        <div class="col">
-            <h2 class="page-tittle">{{mysimulator.name}}</h2>
-            <h3 class="page-sub-tittle">
-                Quantidade
-            <span class="badge bg-success">{{mysimulator.codes.length}}</span>
-            </h3>
-        </div>
-        <div class="col">
-            <ul class="code-list">
-                <li>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Escolha uma data..</mat-label>
-                        <input  matInput [matDatepicker]="picker" (dateChange)="gettingDate($event)">
-                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field>
-                  </li>
-                <li>
-                  
-                    <mat-form-field appearance="outline">
-                        <mat-label>Escolha o Codigo...</mat-label>
-                        <mat-select [(ngModel)]= "simulatorCode">
-                          <!--The value property is important! -->
-                          <mat-option  *ngFor="let element of mysimulator.codes; let i = index" [value] = "i">{{element}}</mat-option>
-                        </mat-select>
+      
+          <div class="col">
+              <h2 class="page-tittle">{{mysimulator.name}}</h2>
+              <h3 class="page-sub-tittle">
+                  Quantidade
+              <span class="badge bg-success">{{mysimulator.codes.length}}</span>
+              </h3>
+          </div>
+          <div class="col">
+              <ul class="code-list">
+                  <li>
+                      <mat-form-field appearance="outline">
+                          <mat-label>Escolha uma data..</mat-label>
+                          <input  matInput [matDatepicker]="picker" (dateChange)="gettingDate($event)">
+                          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
                       </mat-form-field>
-
-                </li>
-                
-            </ul>
-        </div>
+                    </li>
+                  <li>
+                      <mat-form-field appearance="outline">
+                          <mat-label>Escolha o Codigo...</mat-label>
+                          <mat-select [(ngModel)]= "simulatorCode">
+                            <!--The value property is important! -->
+                            <mat-option  *ngFor="let element of mysimulator.codes; let i = index" [value] = "element">{{element}}</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                  </li>
+                  
+              </ul>
+          </div>
+       
     </div>
 </div>
 <div class="container page-body-container">
@@ -39,14 +43,13 @@
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Pulsos:</th>
+                    <th scope="col">Pulsos</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">Carotideo Direito </th>
-                    
                     <td>
                         <mat-form-field appearance="outline">
                             <mat-label>Escolha...</mat-label>
@@ -118,7 +121,7 @@
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Gerais:</th>
+                    <th scope="col">Gerais</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>

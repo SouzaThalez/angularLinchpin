@@ -1,7 +1,7 @@
 <div class="page-tittle">
   <h2>Acompanhe seus Relatorios</h2>
 </div>
-<div class="filter">
+<div class="filter-form">
     <mat-form-field>
       <mat-label>Filtrar por Data</mat-label>
       <mat-select>
@@ -10,21 +10,201 @@
       </mat-select>
     </mat-form-field>
 </div>
-<div class="row">
-    <div class="col-3" *ngFor="let element of fromLocalStorage; let i = index">
+<div class="relatorios-container">
+    <div class="container padding-container">
+        <div class="row">
+          <!--ng container tag for using ngFor without repeating the element-->
+          <ng-container  *ngFor="let element of fromLocalStorage; let i = index">
+            <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h3 class="card-title">Simulador - {{element.simulatorName}}</h3>
+                    <p class="card-text">Download do seu relatorio </p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Codigo: {{element.Code}}</li>
+                    <li class="list-group-item">Data abertura: {{element.date}}</li>
+                  </ul>
+                  <div class="card-body">
+                    <span class="pdf-tittle">PDF Download: </span>
+                    <a href="#" class="card-link">Download</a>
+                  </div>
+                </div>
+            </div>
+            <div class="w-100" *ngIf="i == 3"></div>
+          </ng-container>
+        </div>
+    </div>
+</div>
+
+<!--
+<div class="relatorios-container">
+  <div class="padding-container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Simulador </h3>
+                <p class="card-text">Download do seu relatorio </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Codigo: </li>
+                <li class="list-group-item">Data abertura:</li>
+              </ul>
+              <div class="card-body">
+                <span class="pdf-tittle">PDF Download: </span>
+                <a href="#" class="card-link">Download</a>
+              </div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Simulador </h3>
+              <p class="card-text">Download do seu relatorio </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Codigo: </li>
+              <li class="list-group-item">Data abertura:</li>
+            </ul>
+            <div class="card-body">
+              <span class="pdf-tittle">PDF Download: </span>
+              <a href="#" class="card-link">Download</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">{{i}}</h5>
+            <h3 class="card-title">Simulador </h3>
             <p class="card-text">Download do seu relatorio </p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Codigo: 30218</li>
-            <li class="list-group-item">Data abertura: 10/05/2022</li>
+            <li class="list-group-item">Codigo: </li>
+            <li class="list-group-item">Data abertura:</li>
           </ul>
           <div class="card-body">
             <span class="pdf-tittle">PDF Download: </span>
             <a href="#" class="card-link">Download</a>
           </div>
         </div>
+        </div>
+        <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Simulador </h3>
+            <p class="card-text">Download do seu relatorio </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Codigo: </li>
+            <li class="list-group-item">Data abertura:</li>
+          </ul>
+          <div class="card-body">
+            <span class="pdf-tittle">PDF Download: </span>
+            <a href="#" class="card-link">Download</a>
+          </div>
+        </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Simulador </h3>
+              <p class="card-text">Download do seu relatorio </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Codigo: </li>
+              <li class="list-group-item">Data abertura:</li>
+            </ul>
+            <div class="card-body">
+              <span class="pdf-tittle">PDF Download: </span>
+              <a href="#" class="card-link">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-100"></div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Simulador </h3>
+              <p class="card-text">Download do seu relatorio </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Codigo: </li>
+              <li class="list-group-item">Data abertura:</li>
+            </ul>
+            <div class="card-body">
+              <span class="pdf-tittle">PDF Download: </span>
+              <a href="#" class="card-link">Download</a>
+            </div>
+          </div>
+        </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Simulador </h3>
+            <p class="card-text">Download do seu relatorio </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Codigo: </li>
+            <li class="list-group-item">Data abertura:</li>
+          </ul>
+          <div class="card-body">
+            <span class="pdf-tittle">PDF Download: </span>
+            <a href="#" class="card-link">Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Simulador </h3>
+          <p class="card-text">Download do seu relatorio </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Codigo: </li>
+          <li class="list-group-item">Data abertura:</li>
+        </ul>
+        <div class="card-body">
+          <span class="pdf-tittle">PDF Download: </span>
+          <a href="#" class="card-link">Download</a>
+        </div>
+      </div>
+      </div>
+      <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Simulador </h3>
+          <p class="card-text">Download do seu relatorio </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Codigo: </li>
+          <li class="list-group-item">Data abertura:</li>
+        </ul>
+        <div class="card-body">
+          <span class="pdf-tittle">PDF Download: </span>
+          <a href="#" class="card-link">Download</a>
+        </div>
+      </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Simulador </h3>
+            <p class="card-text">Download do seu relatorio </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Codigo: </li>
+            <li class="list-group-item">Data abertura:</li>
+          </ul>
+          <div class="card-body">
+            <span class="pdf-tittle">PDF Download: </span>
+            <a href="#" class="card-link">Download</a>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+</div>-->

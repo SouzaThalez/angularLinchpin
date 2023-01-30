@@ -1,4 +1,16 @@
+@import './../../../assets/scss/variables';
+.icon-container{
+    img{
+       
+        margin-top: 4em;
+    }
+   
+}
 .page-header-container{
+   
+    box-shadow: $mybox-shadow;
+    background-color: white;
+    border-radius: 10px;
     .code-list{
         margin-top: 67px;
         display: inline-flex;
@@ -8,6 +20,10 @@
     }
 }
 .page-body-container{
+    margin-top: 10px;
+    box-shadow: $mybox-shadow;
+    background-color: white;
+    border-radius: 10px;
     .btns-relatorio{
         float: right;
         button{

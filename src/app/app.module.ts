@@ -19,7 +19,6 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
-import { identifierName } from '@angular/compiler';
 
 
 
@@ -45,7 +44,7 @@ import { identifierName } from '@angular/compiler';
     MatInputModule,
     MatSelectModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

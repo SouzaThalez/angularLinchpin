@@ -2,17 +2,16 @@
     <h2>Simuladores Cadastrados</h2>
 </div>
 <div class="row">
-    <div class="col-4" *ngFor="let element of data">
+    <div class="col-3" *ngFor="let element of data">
         <div class="card-box">
             <div class="img-container">
+                <div class="left-box">
+                    <p>{{element.name}}</p>
+                </div>
                 <img [src]="element.imgPath" alt="">
             </div>
-            <div class="button-container">
-                <div class="button-center">
-                  <button type="button" routerLink="/simuladores/{{element.id}}"
-                    class="btn btn-outline-secondary btn-enviar-relatorio">Enviar Relatório
-                  </button>
-                </div>
+            <div class="link-container">
+                    <a routerLink="/simuladores/{{element.id}}">Enviar Relatório</a>
             </div>
         </div>
     </div>

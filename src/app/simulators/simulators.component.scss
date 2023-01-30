@@ -1,3 +1,5 @@
+@import '../../assets/scss/variables';
+
 .page-tittle{
     position: absolute;
     margin-left: 13px;
@@ -6,14 +8,16 @@
 }
 .row{
     padding-top: 70px;
+    margin-left: 20px;
 }
-.col-4{
+.col-3{
     margin-bottom: 25px;
     
     .card-box{
-        box-shadow: 2px 0px 11px -3px #888888;
-        border-radius: 4px;
-        //width: 280px;
+        box-shadow:$mybox-shadow;
+        background-color: white;
+        border-radius: 10px;
+        width: 280px;
         height: 195px;
         margin-right: 10px;
         margin-left: 10px;
@@ -21,16 +25,52 @@
         flex-direction: column;
         align-items: center;
 
+        .left-box{
+            //box-shadow: 2px 0px 11px -3px #888888;
+            max-height: 30px;
+            position: absolute;
+            margin-left: -31px;
+            margin-top: 10px;
+            background-color: $mainContentBackgroundColor;
+            border-radius: 8px;
+            p{
+                font-size: 13px;
+                padding: 4px;
+                margin-right: 5px;
+            }
+        }
         .img-container{
             width: 100%;
             padding: 10px;
             display: flex;
-            justify-content: center;
+            //justify-content: center;
 
             img{
                 width: 230px;
                 height: 130px;
             }
+        }
+    }
+    .link-container{
+        padding: 5px;
+        border-radius: 5px;
+        //border: 2px solid #EBEBEB;
+        background-color:#EBEBEB ;
+        box-shadow: 2px 0px 11px -3px #888888;
+        a{
+            color: black;
+            text-decoration: dotted;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 1000;
+            color: $homeLeftContainerColor;
+        
+        }
+        &:hover{
+            a{
+                color: white;
+            }
+            box-shadow: 2px 0px 11px -3px #888888;
+            background-color: $homeLeftContainerColor;
         }
     }
 }

@@ -1,18 +1,33 @@
+@import './../../assets/scss/variables';
+
 .page-tittle{
     
     margin-left: 13px;
     margin-top: 10px;
   
 }
-.filter{
+.filter-form{
     float: right;
-    margin-right: 14px;
+    margin-right: 45px;
 }
-.col-3{
-    width: 266px;
-    margin-left: 12px;
-    margin-bottom: 10px;
-    .card{
-        width: 15rem;
+.relatorios-container{
+    margin-top: 6em;
+    margin-left: 1em;
+    margin-right: 3em;
+    background-color: white;
+    box-shadow: $box-shadow;
+    border-radius: 10px;
+    .padding-container{
+        padding: 10px;
+    }
+    .row{
+        gap: 10px;
+
+        .card{
+            width: 15rem;
+            margin-top: 10px;
+            background-color: rgb(235,235,235);
+        }
     }
 }
+

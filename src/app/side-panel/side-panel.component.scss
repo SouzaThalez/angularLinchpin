@@ -7,10 +7,10 @@
     margin-top: 20px;
     width: $sidebar-width;
     height: 100%;
-    box-shadow: $box-shadow;
-
+    //box-shadow: $box-shadow;
+    
     .first-side-panel{
-       
+        
         margin-top: 4em;
 
         .first-side-menu-list{
@@ -21,7 +21,13 @@
 
                 a{
                     text-decoration: none;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 1000;
                     margin-left: 12px;
+                    color: $homeLeftContainerColor;
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
 
                 &:hover{
@@ -29,9 +35,15 @@
                     border-radius: 4px;
                 }
             }
+            .horizontal-line{
+                margin-right: 15px;
+            }
         }
     }
-
+    //line arrow icon
+    .line-icon{
+        float: right;
+    }
     .second-side-panel{
            
         margin-top: 3em;
@@ -47,6 +59,6 @@
                 }
             }
     }
-}
+    }
     
 }
