@@ -1,0 +1,70 @@
+{
+  "simulators": [
+    {
+      "id": 1,
+      "name": "MegaCodeKelly",
+      "imgPath": "assets/imgs/Simuladores/megaKelly.jpeg",
+      "codes": [
+        "3r3r3"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "MegaCodeKid",
+      "imgPath": "assets/imgs/Simuladores/megaKid.jpeg",
+      "codes": [
+        "3r3r3",
+        "4y4y4"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "NurseAnne",
+      "imgPath": "assets/imgs/Simuladores/nurseAnne.jpeg",
+      "codes": [
+        "3r3r3",
+        "4y4y4",
+        "4y4y4"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "SimManALS",
+      "imgPath": "assets/imgs/Simuladores/SimManALS.jpeg",
+      "codes": [
+        "3r3r3",
+        "4y4y4",
+        "4y4y4",
+        "3r3r3",
+        "4y4y4",
+        "4y4y4",
+        "4y4y4",
+        "3r3r3",
+        "4y4y4",
+        "4y4y4"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "SimJunior",
+      "imgPath": "assets/imgs/Simuladores/simJunior.jpeg",
+      "codes": [
+        "3r3r3",
+        "4y4y4",
+        "4y4y4",
+        "3r3r3",
+        "4y4y4",
+        "4y4y4"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "incursoes": "nenhuma falha",
+      "auscultaCardiaca": "parou de funcionar",
+      "simulatorID": 10,
+      "simulatorName": "simMom",
+      "id": 1
+    }
+  ]
+}

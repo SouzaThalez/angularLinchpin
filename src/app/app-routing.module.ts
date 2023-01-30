@@ -5,6 +5,7 @@ import { ModalComponent } from './modal/modal.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
 import { SimulatorDetailsComponent } from './simulators/simulator-details/simulator-details.component';
 import { SimulatorsComponent } from './simulators/simulators.component';
+import { StatusComponent } from './status/status.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'relatorios',
     component:RelatoriosComponent
+  },
+  {
+    path: 'status',
+    component:StatusComponent
   },
   //Qualquer rota que nao seja as de cima
   //redirecTo: Home (pagina home fica como default)

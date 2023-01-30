@@ -19,6 +19,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
+import { StatusComponent } from './status/status.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -31,7 +33,8 @@ import { ModalComponent } from './modal/modal.component';
     TopbarComponent,
     RelatoriosComponent,
     SimulatorDetailsComponent,
-    ModalComponent
+    ModalComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { ModalComponent } from './modal/modal.component';
     MatSelectModule,
     MatTableModule,
     MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
