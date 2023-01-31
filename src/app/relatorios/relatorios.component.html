@@ -1,5 +1,5 @@
 <div class="page-tittle">
-  <h2>Acompanhe seus Relatorios</h2>
+  <h2>Todos os Relatorios</h2>
 </div>
 <div class="filter-form">
     <mat-form-field>
@@ -14,7 +14,7 @@
     <div class="container padding-container">
         <div class="row">
           <!--ng container tag for using ngFor without repeating the element-->
-          <ng-container  *ngFor="let element of fromLocalStorage; let i = index">
+          <ng-container  *ngFor="let element of  fromDbJSON; let i = index">
             <div class="col">
                 <div class="card">
                   <div class="card-body">
@@ -22,8 +22,8 @@
                     <p class="card-text">Download do seu relatorio </p>
                   </div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Codigo: {{element.Code}}</li>
-                    <li class="list-group-item">Data abertura: {{element.date}}</li>
+                    <li class="list-group-item">Codigo: {{element.formCode}}</li>
+                    <li class="list-group-item">Data abertura: {{element.formDate | date}}</li>
                   </ul>
                   <div class="card-body">
                     <span class="pdf-tittle">PDF Download: </span>

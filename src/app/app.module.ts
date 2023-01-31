@@ -21,6 +21,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
 import { StatusComponent } from './status/status.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewSimulatorModalComponent } from './modal/view-simulator-modal/view-simulator-modal.component';
 
 
 
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     RelatoriosComponent,
     SimulatorDetailsComponent,
     ModalComponent,
-    StatusComponent
+    StatusComponent,
+    ViewSimulatorModalComponent
   ],
   imports: [
     BrowserModule,

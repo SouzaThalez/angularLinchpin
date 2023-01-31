@@ -1,4 +1,5 @@
 import { ContentObserver } from '@angular/cdk/observers';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
@@ -14,10 +15,11 @@ import { formData, simulatorsData } from 'src/app/database';
 })
 
 export class SimulatorDetailsComponent implements OnInit {
-
   
+//GLOBAL VARIABELS DECLARATION
   mysimulator: any;
   simulatorCode: any;
+  dateInput: any;
   carotideoDireitoValue: any;
   carotideoEsquerdoValue: any;
   radialDireitoValue: any;
@@ -28,13 +30,13 @@ export class SimulatorDetailsComponent implements OnInit {
   bordasChoqueValue: any ;
   auscultaCardiacaValue: any;
   auscultaPulmonarValue: any;
-  dateInput: any;
 
   //creating an Arry of classes
   // Global Array of Object
   officialForm: formData []=[];
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute, private httpClient: HttpClient) {}
+ 
 
   ngOnInit(): void { 
     
@@ -46,6 +48,7 @@ export class SimulatorDetailsComponent implements OnInit {
   }
 
   onSubmit() {
+
     let count = 0;
     let temporaryForm: any = [];
 
@@ -53,7 +56,10 @@ export class SimulatorDetailsComponent implements OnInit {
     let data = new formData();
 
       temporaryForm.push( 
-      this.simulatorCode,
+      //SimulatorCode and dateInput is here
+      //For the check null loop!!  
+      //this.simulatorCode,
+      //this.dateInput,
       this.carotideoDireitoValue,
       this.carotideoEsquerdoValue,
       this.radialDireitoValue,
@@ -64,7 +70,6 @@ export class SimulatorDetailsComponent implements OnInit {
       this.bordasChoqueValue,
       this.auscultaCardiacaValue,
       this.auscultaPulmonarValue,
-      this.dateInput
       );
 
       //Populate temporary form 
@@ -73,31 +78,39 @@ export class SimulatorDetailsComponent implements OnInit {
         if(element == null){
           count++
         }else{
-          data.formvalues.push(element);
+          data.formInputs.push(element);
         }
       }
          //SHOW MODAL WITH ERRO MESSAGES!
          switch (count) {
           case 0:
             alert('Nao existem campos vazios!');
-              data.Code = this.simulatorCode;
+              data.formCode = this.simulatorCode;
               data.simulatorName = this.mysimulator.name;
-              data.date = this.dateInput;
+              data.formDate = this.dateInput;
               this.officialForm.push(data);
-              //SEND DATA TO LOCAL STORAGE ONCE COMPLETED
-              let convertedV = JSON.stringify(this.officialForm);
-              localStorage.setItem('simulators',convertedV);
+
+              this.httpClient.post('http://localhost:3000/formData',data)
+
+              .subscribe({
+                  next:(sample: any)=>{
+                    console.log('requisicao com sucesso! ', sample)
+                  },
+            
+                  error:(erroSample: any)=>{console.log('ERRO na requisicao!',erroSample)}
+            
+              });
             break;
           default:
             alert('existem campos vazios!');
             break;
         }
-      
-      console.log(this.officialForm);
+        
+        
+      //console.log(this.officialForm);
 
   }
   gettingDate($event: any){
    this.dateInput = $event.target.value;
-
   }
 }

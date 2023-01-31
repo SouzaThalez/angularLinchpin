@@ -29,6 +29,7 @@ export class SimulatorsComponent implements OnInit {
   }
 
   removeData(id: any){
+    
       console.log('sesws'+id);
       this.httpClient.delete("http://localhost:3000/simulators/" + id)
       .subscribe({

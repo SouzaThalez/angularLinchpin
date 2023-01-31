@@ -58,13 +58,42 @@
       ]
     }
   ],
-  "reports": [
+  "formData": [
     {
-      "incursoes": "nenhuma falha",
-      "auscultaCardiaca": "parou de funcionar",
-      "simulatorID": 10,
-      "simulatorName": "simMom",
+      "simulatorName": "SimJunior",
+      "formCode": "3r3r3",
+      "formDate": "2023-01-03T03:00:00.000Z",
+      "formInputs": [
+        "Parou de Funcionar",
+        "Pulso Fraco",
+        "Parou de Funcionar",
+        "Pulso Fraco",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Faltam Bordas",
+        "Nenhuma Falha",
+        "Parou de Funcionar"
+      ],
       "id": 1
+    },
+    {
+      "simulatorName": "SimJunior",
+      "formCode": "4y4y4",
+      "formDate": "2023-01-05T03:00:00.000Z",
+      "formInputs": [
+        "Parou de Funcionar",
+        "Pulso Fraco",
+        "Parou de Funcionar",
+        "Pulso Fraco",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "id": 2
     }
   ]
 }

@@ -1,3 +1,5 @@
+import { HttpClientModule } from "@angular/common/http";
+
 export const simulatorsData =[
     {
       id:1, //router id
@@ -57,16 +59,16 @@ export const simulatorsData =[
 ]
 export class formData{
     simulatorName: string;
-    Code: string;
-    date: string;
-    formvalues: Array<string>;
+    formCode: string;
+    formDate: string;
+    formInputs: Array<string>;
 
 
     constructor(){
       this.simulatorName = '';
-      this.Code = '';
-      this.date= ''; 
-      this.formvalues = [];
+      this.formCode = '';
+      this.formDate= ''; 
+      this.formInputs = [];
     }
 
 }

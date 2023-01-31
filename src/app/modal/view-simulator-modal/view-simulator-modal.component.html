@@ -1,0 +1,15 @@
+
+<ng-container>
+        <h1 mat-dialog-title>Resume do relatorio</h1>
+        <div mat-dialog-content>
+        <p>Seu simulador "{{statusFormData.simulatorName}} com o registro de Codigo "{{statusFormData.formCode}}". Apresentou as seguintes falhas no dia "{{statusFormData.formDate | date}}". </p>
+            <h3>Resume das Falhas </h3>
+            <div class="form-container" *ngFor="let element of statusFormData.formInputs">
+                <p>Nome da falha registrada: {{element}}</p>
+            </div>
+        </div>
+        <div mat-dialog-actions>
+            <button mat-button mat-dialog-close>Cancelar</button>
+            <button mat-raised-button mat-dialog-close>Confirmar</button>
+        </div>
+</ng-container>
