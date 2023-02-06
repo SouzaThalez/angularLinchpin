@@ -31,12 +31,15 @@
                 }
 
                 &:hover{
-                    background-color: $contentHoverBackgroundColr;
+                    background-color: $homeLeftContainerColor;
                     border-radius: 4px;
+                    a{
+                        color: white;
+                    }
                 }
             }
             .horizontal-line{
-                margin-right: 15px;
+                margin-right: 27px;
             }
         }
     }

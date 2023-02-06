@@ -44,8 +44,9 @@
 
             &:hover{
                 cursor: pointer;
-                background-color: rgb(206, 202, 202);
+                background-color: $homeLeftContainerColor;
                 border-radius: 4px;
+                color: white;
             }
         }
         

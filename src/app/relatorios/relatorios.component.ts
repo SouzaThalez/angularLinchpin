@@ -1,6 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import jsPDF from 'jspdf';
 import { elementAt } from 'rxjs';
 import { simulatorsData } from '../database';
 
@@ -15,7 +16,7 @@ export class RelatoriosComponent implements OnInit{
 
   fromLocalStorage: any [] = [];
   showContent = false;
-
+  
 
   constructor( private httpClient: HttpClient){}
 
@@ -58,6 +59,40 @@ export class RelatoriosComponent implements OnInit{
   */
 
     }
+
+
+    generatePDF(elementID: any){
+      
+
+      
+      const doc = new jsPDF();
+
+  
+      doc.text("Relaório da Saúde do seu simulador", 75, 15);
+      doc.setFontSize(15);
+      //doc.setFontType("normal");
+      let element = this.fromDbJSON[elementID];
+      doc.text("Relato de todas as falhas registradas no",20, 35);
+      doc.text("dia " + element.formDate ,20,40);
+      let infoV = element.formValues;
+      doc.setFontSize(15);
+      doc.setFont("times", "italic");
+      doc.text("Nome do simulador: "+ element.simulatorName,20, 50);
+      doc.text("Codigo do simulador: "+ element.formCode,20, 60);
+      doc.text("Falhas registradas ", 80, 78);
+    for (let i = 0; i < infoV.length; i++) {
+        const info = infoV[i];
+        doc.text(info,95, 100 + i*7); //margin-right 90 da segunda tabela
+    }
+    let namesV = element.formNames;
+    for (let i = 0; i < namesV.length; i++) {
+      const info = namesV[i];
+      doc.text(info,20, 100 + i*7);// para cada linha no infoV pular x6 no pdf
+  }
+      doc.save(element.simulatorName+" Relatorio.pdf");
+
+    }
+
 
     
 }

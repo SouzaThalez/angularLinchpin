@@ -17,7 +17,10 @@ export class ViewSimulatorModalComponent implements OnInit{
       {}
 
   ngOnInit(): void {
+    //gettind the card id from json file 
+    // and showing only that card! 
     this.httpClient.get('http://localhost:3000/formData/'+ this.data.cardID)
+
     .subscribe({
         next:(sample: any)=>{
           console.log('Sample request is working!!!',sample);
@@ -31,3 +34,4 @@ export class ViewSimulatorModalComponent implements OnInit{
 
 
 }
+

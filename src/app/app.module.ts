@@ -22,7 +22,7 @@ import { ModalComponent } from './modal/modal.component';
 import { StatusComponent } from './status/status.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewSimulatorModalComponent } from './modal/view-simulator-modal/view-simulator-modal.component';
-
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -36,7 +36,7 @@ import { ViewSimulatorModalComponent } from './modal/view-simulator-modal/view-s
     SimulatorDetailsComponent,
     ModalComponent,
     StatusComponent,
-    ViewSimulatorModalComponent
+    ViewSimulatorModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +50,8 @@ import { ViewSimulatorModalComponent } from './modal/view-simulator-modal/view-s
     MatSelectModule,
     MatTableModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

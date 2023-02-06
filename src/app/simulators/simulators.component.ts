@@ -15,6 +15,7 @@ export class SimulatorsComponent implements OnInit {
 
 
   ngOnInit(): void {
+
     this.httpClient.get('http://localhost:3000/simulators')
       .subscribe({
         next: (sample: any) =>{
@@ -28,21 +29,23 @@ export class SimulatorsComponent implements OnInit {
       })
   }
 
-  removeData(id: any){
-    
-      console.log('sesws'+id);
-      this.httpClient.delete("http://localhost:3000/simulators/" + id)
-      .subscribe({
-        next: (sample: any) =>{
-          console.log('deleted id; ',id);
-          this.ngOnInit();
-        },
-        error: (erro)=>{
-          console.log('failed to delete! ', id);
-        }
+    //remove data 
+    /*
+    removeData(id: any){
+      
+        console.log('sesws'+id);
+        this.httpClient.delete("http://localhost:3000/simulators/" + id)
+        .subscribe({
+          next: (sample: any) =>{
+            console.log('deleted id; ',id);
+            this.ngOnInit();
+          },
+          error: (erro)=>{
+            console.log('failed to delete! ', id);
+          }
 
-      })
-  }
-
+        })
+    }
+    */
 
 }

@@ -60,40 +60,125 @@
   ],
   "formData": [
     {
-      "simulatorName": "SimJunior",
-      "formCode": "3r3r3",
-      "formDate": "2023-01-03T03:00:00.000Z",
-      "formInputs": [
+      "formValues": [
+        "Parou de Funcionar",
         "Parou de Funcionar",
         "Pulso Fraco",
         "Parou de Funcionar",
-        "Pulso Fraco",
         "Nenhuma Falha",
         "Parou de Funcionar",
+        "Faltam Eletrodos",
         "Parou de Funcionar",
-        "Faltam Bordas",
         "Nenhuma Falha",
-        "Parou de Funcionar"
+        "Nenhuma Falha"
       ],
+      "formDate": "2023-02-03T03:00:00.000Z",
+      "formCode": "3r3r3",
+      "formNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "NurseAnne",
       "id": 1
     },
     {
-      "simulatorName": "SimJunior",
-      "formCode": "4y4y4",
-      "formDate": "2023-01-05T03:00:00.000Z",
-      "formInputs": [
-        "Parou de Funcionar",
+      "formValues": [
         "Pulso Fraco",
         "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Faltam Eletrodos",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Nenhuma Falha"
+      ],
+      "formDate": "2023-02-02T03:00:00.000Z",
+      "formCode": "3r3r3",
+      "formNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "MegaCodeKid",
+      "id": 2
+    },
+    {
+      "formValues": [
+        "Parou de Funcionar",
         "Pulso Fraco",
+        "Pulso Fraco",
+        "Parou de Funcionar",
         "Nenhuma Falha",
         "Parou de Funcionar",
         "Parou de Funcionar",
         "Parou de Funcionar",
         "Parou de Funcionar",
-        "Parou de Funcionar"
+        "Nenhuma Falha"
       ],
+      "formDate": "2023-02-08T03:00:00.000Z",
+      "formNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "SimManALS",
+      "id": 3
+    }
+  ],
+  "simulatorsAdded": [
+    {
+      "simulatorName": "simManALs",
+      "simulatorCode": "frfrfr",
+      "simulatorDate": "",
+      "id": 1
+    },
+    {
+      "simulatorName": "simManALs",
+      "simulatorCode": "dedede",
+      "simulatorDate": "",
       "id": 2
+    },
+    {
+      "simulatorName": "simMan3G",
+      "simulatorCode": "deeded",
+      "simulatorDate": "",
+      "id": 3
+    },
+    {
+      "simulatorName": "simManALs",
+      "simulatorCode": "gttgtg",
+      "simulatorDate": "",
+      "id": 4
+    },
+    {
+      "simulatorName": "MegaCodeKelly",
+      "simulatorCode": "gtgtgt",
+      "simulatorDate": "",
+      "id": 5
     }
   ]
 }

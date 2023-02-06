@@ -4,9 +4,37 @@
         <div mat-dialog-content>
         <p>Seu simulador "{{statusFormData.simulatorName}} com o registro de Codigo "{{statusFormData.formCode}}". Apresentou as seguintes falhas no dia "{{statusFormData.formDate | date}}". </p>
             <h3>Resume das Falhas </h3>
-            <div class="form-container" *ngFor="let element of statusFormData.formInputs">
-                <p>Nome da falha registrada: {{element}}</p>
+
+            <div class="col table-colums">
+                <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Recurso</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let element of statusFormData.formNames">
+                    <th>{{element}}</th>
+                  </tr>
+                </tbody>
+                </table> 
             </div>
+            <div class="col table-colums">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Ocorrencias</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let element of statusFormData.formValues">
+                        <td>{{element}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+           
         </div>
         <div mat-dialog-actions>
             <button mat-button mat-dialog-close>Cancelar</button>

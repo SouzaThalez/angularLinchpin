@@ -3,15 +3,18 @@
 <div mat-dialog-content>
     <mat-form-field>
     <mat-label>Novo simulador</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="simulatorName">
             <mat-option value="simManALs">SimManALS</mat-option>
             <mat-option value="simMan3G">SimMan3G</mat-option>
+            <mat-option value="simJunior">SimJunior</mat-option>
+            <mat-option value="simBaby">SimBaby</mat-option>
+            <mat-option value="MegaCodeKelly">MegaCode Kelly</mat-option>
         </mat-select>
     </mat-form-field>
     <mat-form-field hintLabel="Max 6 characters" appearance="fill">
         <mat-label>Codigo do simulador</mat-label>
-        <input matInput #input maxlength="6" placeholder="Ex. CC3TCF">
-        <mat-hint align="end">{{input.value.length}}/6</mat-hint>
+        <input matInput #simulatorCode maxlength="6" placeholder="Ex. CC3TCF">
+        <mat-hint align="end">{{simulatorCode.value.length}}/6</mat-hint>
     </mat-form-field>
     <p class="button-paragraph">
         <button mat-raised-button
@@ -23,5 +26,5 @@
 </div>
 <div mat-dialog-actions>
     <button mat-button mat-dialog-close>Cancelar</button>
-    <button mat-raised-button mat-dialog-close>Confirmar</button>
+    <button mat-raised-button mat-dialog-close (click)="getModalInfo(simulatorCode.value)">Confirmar</button>
   </div>

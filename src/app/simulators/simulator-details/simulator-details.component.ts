@@ -6,7 +6,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { DateRange, MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { ActivatedRoute, withRouterConfig } from '@angular/router';
 import { elementAt } from 'rxjs';
-import { formData, simulatorsData } from 'src/app/database';
+import {simulatorsAdded, simulatorsData,formuData } from 'src/app/database';
 
 @Component({
   selector: 'app-simulator-details',
@@ -17,6 +17,17 @@ import { formData, simulatorsData } from 'src/app/database';
 export class SimulatorDetailsComponent implements OnInit {
   
 //GLOBAL VARIABELS DECLARATION
+  tableName1 = 'Carotideo Direito';
+  tableName2 = 'Carotideo Esquerdo';
+  tableName3 = 'Radial direito';
+  tableName4 = 'Braqueal direito';
+  tableName5 = 'Aparelho de medir Pressão';
+  tableName6 = 'Incursões Respiratórias';
+  tableName7 = 'Eletrodos para Monitorização';
+  tableName8 = 'Bordas de Choque Elétrico';
+  tableName9 = 'Ausculta Cardiaca';
+  tableName10 = 'Ausculta Pulmonar';
+
   mysimulator: any;
   simulatorCode: any;
   dateInput: any;
@@ -31,9 +42,14 @@ export class SimulatorDetailsComponent implements OnInit {
   auscultaCardiacaValue: any;
   auscultaPulmonarValue: any;
 
+  
+  
+  
   //creating an Arry of classes
   // Global Array of Object
-  officialForm: formData []=[];
+  dataFormV: any[] =[];
+  tableNames: any[] =[];
+ 
 
   constructor(private activatedRoute: ActivatedRoute, private httpClient: HttpClient) {}
  
@@ -45,17 +61,35 @@ export class SimulatorDetailsComponent implements OnInit {
       return element.id == id; 
     });
     console.log(this.mysimulator);
+    
+    //Numero fixo de itens
+      this.tableNames.push(
+        this.tableName1,
+        this.tableName2,
+        this.tableName3,
+        this.tableName4,
+        this.tableName5,
+        this.tableName6,
+        this.tableName7,
+        this.tableName8,
+        this.tableName9,
+        this.tableName10
+      );
+    
   }
 
   onSubmit() {
 
+
+    let name= '';
+    let values = '';
     let count = 0;
     let temporaryForm: any = [];
 
-     //New instance of Class 
-    let data = new formData();
-
-      temporaryForm.push( 
+    //New instance of Class 
+    let formData = new formuData();
+    
+    temporaryForm.push( 
       //SimulatorCode and dateInput is here
       //For the check null loop!!  
       //this.simulatorCode,
@@ -70,28 +104,31 @@ export class SimulatorDetailsComponent implements OnInit {
       this.bordasChoqueValue,
       this.auscultaCardiacaValue,
       this.auscultaPulmonarValue,
-      );
-
+    );
+       
       //Populate temporary form 
       for (let index = 0; index < temporaryForm.length; index++) {
         const element = temporaryForm[index];
         if(element == null){
           count++
         }else{
-          data.formInputs.push(element);
+          formData.formValues.push(element);
+          console.log(formData);
         }
       }
+
+
          //SHOW MODAL WITH ERRO MESSAGES!
          switch (count) {
           case 0:
             alert('Nao existem campos vazios!');
-              data.formCode = this.simulatorCode;
-              data.simulatorName = this.mysimulator.name;
-              data.formDate = this.dateInput;
-              this.officialForm.push(data);
 
-              this.httpClient.post('http://localhost:3000/formData',data)
+              formData.formCode = this.simulatorCode;
+              formData.formNames = this.tableNames;
+              formData.formDate = this.dateInput;
+              formData.simulatorName = this.mysimulator.name;
 
+              this.httpClient.post('http://localhost:3000/formData',formData)
               .subscribe({
                   next:(sample: any)=>{
                     console.log('requisicao com sucesso! ', sample)
@@ -105,11 +142,9 @@ export class SimulatorDetailsComponent implements OnInit {
             alert('existem campos vazios!');
             break;
         }
-        
-        
-      //console.log(this.officialForm);
 
   }
+  
   gettingDate($event: any){
    this.dateInput = $event.target.value;
   }
