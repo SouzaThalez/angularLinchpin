@@ -23,6 +23,10 @@ import { StatusComponent } from './status/status.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewSimulatorModalComponent } from './modal/view-simulator-modal/view-simulator-modal.component';
 import {MatButtonModule} from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatBadgeModule} from '@angular/material/badge';
+import { SucessModalComponent } from './modal/sucess-modal/sucess-modal.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -37,6 +41,8 @@ import {MatButtonModule} from '@angular/material/button';
     ModalComponent,
     StatusComponent,
     ViewSimulatorModalComponent,
+    SucessModalComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +58,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatDialogModule,
     HttpClientModule,
     MatButtonModule,
+    MatTooltipModule,
+    MatBadgeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

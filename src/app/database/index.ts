@@ -57,18 +57,25 @@ export const simulatorsData =[
       codes: ['3r3r3','4y4y4']
     }
 ]
+
+
+
 export class simulatorsAdded{
     simulatorName: string;
-    simulatorCode: string;
-    simulatorDate: string ; 
-
+    simulatorCodes: Array<string>;
+    simulatorImgPath: string;
+    newCode: string;
+  
     constructor(){
       this.simulatorName = '';
-      this.simulatorCode = '';
-      this.simulatorDate= ''; 
+      this.simulatorCodes = [];
+      this.simulatorImgPath = '';
+      this.newCode = '';
+      
     }
 
 }
+
 export class formuData{
   formValues: Array<string>;
   formDate: string; 

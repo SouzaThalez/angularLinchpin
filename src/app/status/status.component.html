@@ -18,23 +18,26 @@
             <div class="col">
                 <div class="card">
                   <div class="card-body">
-                    <h3 class="card-title">Nome - {{element.simulatorName}}</h3>
+                    <img class="patient-icon" src="../../assets/imgs/icons/health/criticalPatient.png" alt="">
+                    O que vai fazer comigo ?
+                    
                     <p class="card-text">
                       <img src="assets/imgs/icons/viewSearch.png" alt="searchIcon">
                       <a class="view-dialog-link" (click)="openViewDialog(element.id)">Ver relatorio</a>
                     </p>
                   </div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Codigo: {{element.formCode}}</li>
-                    <li class="list-group-item">Status: ABERTO</li>
+                    <li class="list-group-item">Nome: {{element.simulatorName}}</li>
+                    <li #statusElement class="list-group-item" [class.defaultColor]="isActive">Status:<span>{{valueSelected.value}}</span></li>
                   </ul>
-                  <div class="card-body">
+                  <div class="card-footer">
                     <span class="pdf-tittle">Definir Status: </span>
-                    <select name="dropdown">
-                        <option value="fechar">FECHAR</option>
-                        <option value="pendente">PENDENTE</option>
+                    <select name="dropdown" #valueSelected>
+                      <option value=" ABERTO" selected>Aberto</option>
+                        <option value=" FECHADO">FECHAR</option>
+                        <option value="PENDENTE">PENDENTE</option>
                     </select>
-                    <button mat-raised-button color="primary" type="button" class="btn-confirm">Confirmar</button>
+                    <button mat-stroked-button color="primary" class="btn-confirm" (click)="getStatus(valueSelected.value,statusElement)">Confirmar</button>
                   </div>
                 </div>
             </div>

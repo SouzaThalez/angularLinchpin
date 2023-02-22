@@ -1,15 +1,7 @@
 <div class="page-tittle">
   <h2>Todos os Relatorios</h2>
 </div>
-<div class="filter-form">
-    <mat-form-field>
-      <mat-label>Filtrar por Data</mat-label>
-      <mat-select>
-          <mat-option value="antigo">Mais antigo</mat-option>
-          <mat-option value="recente">Mais recente</mat-option>
-      </mat-select>
-    </mat-form-field>
-</div>
+
 <div class="relatorios-container">
     <div class="container padding-container">
         <div class="row">
@@ -18,20 +10,19 @@
             <div class="col">
                 <div class="card">
                   <div class="card-body">
-                    <h3 class="card-title">Simulador - {{element.simulatorName}}</h3>
-                    <p class="card-text">Download do seu relatorio </p>
+                    <h3 class="card-title">Paciente - {{element.simulatorName}}</h3>
+                    <p class="card-text"><img src="../../assets/imgs/icons/health/hospital-bed.png" alt=""> Preciso de Ajuda... </p>
                   </div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Codigo: {{element.formCode}}</li>
+                    <li class="list-group-item">Registro: {{element.formCode}}</li>
                     <li class="list-group-item">Data abertura: {{element.formDate | date}}</li>
                   </ul>
-                  <div class="card-body">
-                    <span class="pdf-tittle">PDF Download: </span>
-                    <a  class="card-link" (click)="generatePDF(i)">Download</a>
+                  <div class="card-footer">
+                    <button class="download-btn" mat-stroked-button (click)="generatePDF(i)">PDF Download</button>
                   </div>
                 </div>
             </div>
-            <div class="w-100" *ngIf="i == 3"></div>
+            
           </ng-container>
         </div>
     </div>

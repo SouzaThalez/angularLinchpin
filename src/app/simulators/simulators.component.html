@@ -2,13 +2,13 @@
     <h2>Simuladores Cadastrados</h2>
 </div>
 <div class="row">
-    <div class="col-3" *ngFor="let element of data">
+    <div class="col-3" *ngFor="let element of jsonSimulators">
         <div class="card-box">
             <div class="img-container">
                 <div class="left-box">
-                    <p>{{element.name}}</p>
+                    <p class="card-name">{{element.simulatorName}}</p>
                 </div>
-                <img [src]="element.imgPath" alt="">
+                <img [src]="element.simulatorImgPath" alt="">
             </div>
             <div class="link-container">
                     <a routerLink="/simuladores/{{element.id}}">Enviar Relatório</a>

@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { ModalComponent } from './modal/modal.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
 import { SimulatorDetailsComponent } from './simulators/simulator-details/simulator-details.component';
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'status',
     component:StatusComponent
+  },
+  {
+    path:'login',
+    component: LoginComponent
   },
   //Qualquer rota que nao seja as de cima
   //redirecTo: Home (pagina home fica como default)

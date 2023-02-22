@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { simulatorsData } from '../database';
+import { AppService } from '../services/app.service';
 
 @Component({
   selector: 'app-simulators',
@@ -9,24 +10,38 @@ import { simulatorsData } from '../database';
 })
 export class SimulatorsComponent implements OnInit {
     
-    data: any [] = [];
+    jsonSimulators: any [] = [];
 
-    constructor(private httpClient: HttpClient) {}
+    constructor(private httpClient: HttpClient,
+      private appService: AppService
+      ) {}
 
+    ngOnInit(): void {
 
-  ngOnInit(): void {
-
-    this.httpClient.get('http://localhost:3000/simulators')
-      .subscribe({
-        next: (sample: any) =>{
-          console.log('is working',sample);
-          this.data = sample;
-        },
-        error: (erro)=>{
-          console.log('nothing here! ', erro);
+      this.appService.onNewSimulator.subscribe({
+        next:(val)=> {
+          console.log(val);
+          this.getFromJSON();
         }
-
       })
+
+      this.getFromJSON();
+
+    }
+
+  getFromJSON(){
+
+    this.httpClient.get('http://localhost:3000/simulatorsAdded')
+    .subscribe({
+      next: (sample: any) =>{
+        console.log('is working',sample);
+        this.jsonSimulators = sample;
+      },
+      error: (erro)=>{
+        console.log('nothing here! ', erro);
+      }
+
+    })
   }
 
     //remove data 

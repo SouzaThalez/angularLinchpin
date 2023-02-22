@@ -11,7 +11,7 @@ import { ViewSimulatorModalComponent } from '../modal/view-simulator-modal/view-
 export class StatusComponent implements OnInit{
 
   formData: any[] = [];
-  
+  isActive = true;
   //USING HTTPClient
   constructor(private httpClient: HttpClient, public matModal: MatDialog){}
 
@@ -30,6 +30,7 @@ export class StatusComponent implements OnInit{
       });
 
   }
+
   openViewDialog(id: any){
 
     this.matModal.open(ViewSimulatorModalComponent,{
@@ -37,6 +38,24 @@ export class StatusComponent implements OnInit{
         cardID: id
       }
     })
+    
+  }
+  getStatus(value:any,statuselement:any){
+    //define Color!
+    switch (value) {
+      case ' FECHADO':
+          statuselement.style.backgroundColor = "#00798C";
+          statuselement.style.color = 'white';
+        break;
+      case 'PENDENTE':
+        statuselement.style.backgroundColor = "#edae49";
+        statuselement.style.color = 'black';
+        break;
+      default:
+        statuselement.style.backgroundColor = "#D1495B";
+        statuselement.style.color = 'white';
+        break;
+    }
     
   }
 

@@ -11,6 +11,18 @@
     box-shadow: $mybox-shadow;
     background-color: white;
     border-radius: 10px;
+
+    .page-tittle{
+        margin-top: 10px;
+    }
+    .page-sub-tittle{
+        margin-top: 46px;
+    }
+    .array-size-btn{
+        vertical-align: top;
+        margin-top: -15px;
+    }
+    
     .code-list{
         margin-top: 67px;
         display: inline-flex;

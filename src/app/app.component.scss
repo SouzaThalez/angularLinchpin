@@ -8,10 +8,12 @@
     
     .main-content-box{
         margin: 20px;
-        margin-left: -11px;
+        margin-left: -42px;
+        padding: 30px;
         box-shadow: $mybox-shadow;
         border-radius: 15px;
         height: 100%;
-        background-color: #ebebeb;
+        background-color: $mainContentBackgroundColor;
+        overflow-y: auto;
     }
 }

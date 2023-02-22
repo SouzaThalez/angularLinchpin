@@ -13,7 +13,13 @@
     .card{
         width: 16em;
         margin-left: 16px;
+        .patient-icon{
+            margin-left: -6px;
+        }
         .card-text{
+            //margin-top: 10px;
+            width: 120px;
+            margin: 10px auto;
             img{
                 margin-right: 3px;
             }
@@ -24,9 +30,17 @@
                 }
             }
         }
-
-        .btn-confirm{
-            margin-top: 10px;
+        .defaultColor{
+            background-color: #D1495B;
+            color: white;
         }
+        .card-footer{
+            padding: 10px;
+            .btn-confirm{
+                margin: 10px auto;
+                width: 200px;
+            }
+        }
+       
     }
 }

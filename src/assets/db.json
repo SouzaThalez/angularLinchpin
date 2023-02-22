@@ -5,7 +5,7 @@
       "name": "MegaCodeKelly",
       "imgPath": "assets/imgs/Simuladores/megaKelly.jpeg",
       "codes": [
-        "3r3r3"
+        "CFE390"
       ]
     },
     {
@@ -13,8 +13,8 @@
       "name": "MegaCodeKid",
       "imgPath": "assets/imgs/Simuladores/megaKid.jpeg",
       "codes": [
-        "3r3r3",
-        "4y4y4"
+        "CFE390",
+        "CFH547"
       ]
     },
     {
@@ -22,9 +22,9 @@
       "name": "NurseAnne",
       "imgPath": "assets/imgs/Simuladores/nurseAnne.jpeg",
       "codes": [
-        "3r3r3",
-        "4y4y4",
-        "4y4y4"
+        "CFE390",
+        "CFH547",
+        "CFH547"
       ]
     },
     {
@@ -32,16 +32,16 @@
       "name": "SimManALS",
       "imgPath": "assets/imgs/Simuladores/SimManALS.jpeg",
       "codes": [
-        "3r3r3",
-        "4y4y4",
-        "4y4y4",
-        "3r3r3",
-        "4y4y4",
-        "4y4y4",
-        "4y4y4",
-        "3r3r3",
-        "4y4y4",
-        "4y4y4"
+        "CFE390",
+        "CFH547",
+        "CFH547",
+        "CFE390",
+        "CFH547",
+        "CFH547",
+        "CFH547",
+        "CFE390",
+        "CFH547",
+        "CFH547"
       ]
     },
     {
@@ -49,31 +49,33 @@
       "name": "SimJunior",
       "imgPath": "assets/imgs/Simuladores/simJunior.jpeg",
       "codes": [
-        "3r3r3",
-        "4y4y4",
-        "4y4y4",
-        "3r3r3",
-        "4y4y4",
-        "4y4y4"
+        "CFE390",
+        "CFH547",
+        "CFH547",
+        "CFE390",
+        "CFH547",
+        "CFH547"
       ]
     }
   ],
   "formData": [
     {
       "formValues": [
+        "iukyu",
+        "2023-02-21T03:00:00.000Z",
         "Parou de Funcionar",
         "Parou de Funcionar",
-        "Pulso Fraco",
-        "Parou de Funcionar",
-        "Nenhuma Falha",
-        "Parou de Funcionar",
-        "Faltam Eletrodos",
         "Parou de Funcionar",
         "Nenhuma Falha",
-        "Nenhuma Falha"
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Nenhuma Falha",
+        "Parou de Funcionar"
       ],
-      "formDate": "2023-02-03T03:00:00.000Z",
-      "formCode": "3r3r3",
+      "formDate": "2023-02-21T03:00:00.000Z",
+      "formCode": "iukyu",
       "formNames": [
         "Carotideo Direito",
         "Carotideo Esquerdo",
@@ -86,24 +88,26 @@
         "Ausculta Cardiaca",
         "Ausculta Pulmonar"
       ],
-      "simulatorName": "NurseAnne",
+      "simulatorName": "simNewB",
       "id": 1
     },
     {
       "formValues": [
-        "Pulso Fraco",
+        "weq344",
+        "2023-02-14T03:00:00.000Z",
         "Parou de Funcionar",
         "Parou de Funcionar",
         "Parou de Funcionar",
-        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
         "Parou de Funcionar",
         "Faltam Eletrodos",
-        "Nenhuma Falha",
         "Parou de Funcionar",
-        "Nenhuma Falha"
+        "Parou de Funcionar",
+        "Parou de Funcionar"
       ],
-      "formDate": "2023-02-02T03:00:00.000Z",
-      "formCode": "3r3r3",
+      "formDate": "2023-02-14T03:00:00.000Z",
+      "formCode": "weq344",
       "formNames": [
         "Carotideo Direito",
         "Carotideo Esquerdo",
@@ -116,23 +120,26 @@
         "Ausculta Cardiaca",
         "Ausculta Pulmonar"
       ],
-      "simulatorName": "MegaCodeKid",
+      "simulatorName": "ressusciAnne",
       "id": 2
     },
     {
       "formValues": [
-        "Parou de Funcionar",
-        "Pulso Fraco",
-        "Pulso Fraco",
-        "Parou de Funcionar",
-        "Nenhuma Falha",
+        "23ff2F",
+        "2023-02-23T03:00:00.000Z",
         "Parou de Funcionar",
         "Parou de Funcionar",
         "Parou de Funcionar",
         "Parou de Funcionar",
-        "Nenhuma Falha"
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
       ],
-      "formDate": "2023-02-08T03:00:00.000Z",
+      "formDate": "2023-02-23T03:00:00.000Z",
+      "formCode": "23ff2F",
       "formNames": [
         "Carotideo Direito",
         "Carotideo Esquerdo",
@@ -145,40 +152,295 @@
         "Ausculta Cardiaca",
         "Ausculta Pulmonar"
       ],
-      "simulatorName": "SimManALS",
+      "simulatorName": "simMan3G",
       "id": 3
+    },
+    {
+      "formValues": [
+        "qqw213",
+        "2023-02-23T03:00:00.000Z",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-02-23T03:00:00.000Z",
+      "formCode": "qqw213",
+      "formNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "megaCodeKid",
+      "id": 4
+    },
+    {
+      "formValues": [
+        "HGJOKD",
+        "2023-02-22T03:00:00.000Z",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-02-22T03:00:00.000Z",
+      "formCode": "HGJOKD",
+      "formNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "simManALs",
+      "id": 5
+    },
+    {
+      "formValues": [
+        "123232",
+        "2023-02-02T03:00:00.000Z",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Pulso Fraco",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Faltam Eletrodos",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-02-02T03:00:00.000Z",
+      "formCode": "123232",
+      "formNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "simJunior",
+      "id": 6
+    },
+    {
+      "formValues": [
+        "ALSCFG",
+        "2023-02-22T03:00:00.000Z",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Faltam Bordas",
+        "Nenhuma Falha",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-02-22T03:00:00.000Z",
+      "formCode": "ALSCFG",
+      "formNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "simManALs",
+      "id": 7
+    },
+    {
+      "formValues": [
+        "213123",
+        "2023-02-20T03:00:00.000Z",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Pulso Fraco",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Faltam Eletrodos",
+        "Faltam Bordas",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-02-20T03:00:00.000Z",
+      "formCode": "213123",
+      "formNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "simManALs",
+      "id": 8
+    },
+    {
+      "formValues": [
+        "123232",
+        "2023-02-22T03:00:00.000Z",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-02-22T03:00:00.000Z",
+      "formCode": "123232",
+      "formNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "simJunior",
+      "id": 9
     }
   ],
   "simulatorsAdded": [
     {
       "simulatorName": "simManALs",
-      "simulatorCode": "frfrfr",
-      "simulatorDate": "",
+      "simulatorCodes": [
+        "ALSCFG",
+        "HGJOKD",
+        "dedede",
+        "dedede",
+        "eded",
+        "dw",
+        "213123",
+        "wqgwg"
+      ],
+      "simulatorImgPath": "assets/imgs/Simuladores/SimManALS.jpeg",
+      "newCode": "ALSCFG",
+      "simulatorID": 1,
       "id": 1
     },
     {
-      "simulatorName": "simManALs",
-      "simulatorCode": "dedede",
-      "simulatorDate": "",
+      "simulatorName": "simMan3G",
+      "simulatorCodes": [
+        "ju",
+        "kilool",
+        "opreye",
+        "23ff2F"
+      ],
+      "simulatorImgPath": "assets/imgs/Simuladores/SIM3G.jpeg",
+      "newCode": "ki",
+      "simulatorID": 0,
       "id": 2
     },
     {
-      "simulatorName": "simMan3G",
-      "simulatorCode": "deeded",
-      "simulatorDate": "",
+      "simulatorName": "simJunior",
+      "simulatorCodes": [
+        "cayle1",
+        "123232"
+      ],
+      "simulatorImgPath": "assets/imgs/Simuladores/simJunior.jpeg",
+      "newCode": "cayle1",
+      "simulatorID": 3,
       "id": 3
     },
     {
-      "simulatorName": "simManALs",
-      "simulatorCode": "gttgtg",
-      "simulatorDate": "",
+      "simulatorName": "nurseAnne",
+      "simulatorCodes": [
+        "5643",
+        "wftqwf"
+      ],
+      "simulatorImgPath": "assets/imgs/Simuladores/nurseAnne.jpeg",
+      "newCode": "5643",
+      "simulatorID": 8,
       "id": 4
     },
     {
-      "simulatorName": "MegaCodeKelly",
-      "simulatorCode": "gtgtgt",
-      "simulatorDate": "",
+      "simulatorName": "megaCodeKid",
+      "simulatorCodes": [
+        "qqw213",
+        "pl242",
+        "weqdD4"
+      ],
+      "simulatorImgPath": "assets/imgs/Simuladores/megaKid.jpeg",
+      "newCode": "qqw213",
       "id": 5
+    },
+    {
+      "simulatorName": "ressusciAnne",
+      "simulatorCodes": [
+        "pete24",
+        "weq344",
+        "FEEEFE"
+      ],
+      "simulatorImgPath": "assets/imgs/Simuladores/RessuciAnne.jpg",
+      "newCode": "pete24",
+      "id": 6
+    },
+    {
+      "simulatorName": "simNewB",
+      "simulatorCodes": [
+        "iukyu"
+      ],
+      "simulatorImgPath": "assets/imgs/Simuladores/SimNewb.jpeg",
+      "newCode": "iukyu",
+      "id": 7
+    },
+    {
+      "simulatorName": "SimBaby",
+      "simulatorCodes": [
+        "482200",
+        "85FRWD"
+      ],
+      "simulatorImgPath": "assets/imgs/Simuladores/simBaby.jpeg",
+      "newCode": "482200",
+      "id": 8
     }
   ]
 }

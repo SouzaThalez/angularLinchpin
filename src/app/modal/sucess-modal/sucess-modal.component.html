@@ -1,0 +1,19 @@
+
+<!-- Grenn mat-dialog template-->
+<div *ngIf="data.greenDialog">
+    <h1 mat-dialog-title>Sucesso!</h1>
+    <div mat-dialog-content>
+        <div class="text-bg-success p-3">Novo Relatorio Adicionado!</div>
+    </div>
+    <div mat-dialog-actions>
+    </div>
+</div>
+<!-- RED mat-dialog template-->
+<div *ngIf="data.redDialog">
+    <h1 mat-dialog-title>Incompleto!</h1>
+    <div mat-dialog-content>
+        <div class="text-bg-danger p-3">Existem campos Vazios :(</div>
+    </div>
+    <div mat-dialog-actions>
+    </div>
+</div>
