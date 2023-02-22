@@ -8,7 +8,8 @@ import { ActivatedRoute, withRouterConfig } from '@angular/router';
 import { elementAt, findIndex } from 'rxjs';
 import {simulatorsAdded, simulatorsData,formuData } from 'src/app/database';
 import { MatDialog } from '@angular/material/dialog';
-import { SucessModalComponent } from 'src/app/modal/sucess-modal/sucess-modal.component';
+import { SucessModalComponent } from '../../modal/sucess-modal/sucess-modal.component';
+
 
 @Component({
   selector: 'app-simulator-details',

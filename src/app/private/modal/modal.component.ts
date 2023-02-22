@@ -4,8 +4,8 @@ import { Component, DEFAULT_CURRENCY_CODE, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 import { elementAt, sample } from 'rxjs';
-import { simulatorsAdded, simulatorsData } from '../database';
-import { AppService } from '../services/app.service';
+import { simulatorsAdded, simulatorsData } from '../../database';
+import { AppService } from '../../services/app.service';
 import { SimulatorsComponent } from '../simulators/simulators.component';
 
 

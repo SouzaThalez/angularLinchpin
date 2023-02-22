@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
-import { AppService } from '../services/app.service';
+import { AppService } from '../../services/app.service';
 
 
 @Component({

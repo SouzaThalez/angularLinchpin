@@ -3,7 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import jsPDF from 'jspdf';
 import { elementAt } from 'rxjs';
-import { simulatorsData } from '../database';
+import { simulatorsData } from '../../database';
 
 
 @Component({

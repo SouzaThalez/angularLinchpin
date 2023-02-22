@@ -1,0 +1,19 @@
+@import '../../assets/scss/variables';
+.main-content {
+    position: absolute;
+    left: $sidebar-width;
+    top: $topbar-height;
+    height: 100%;
+    width: calc(100% - #{$sidebar-width});
+    
+    .main-content-box{
+        margin: 20px;
+        margin-left: -42px;
+        padding: 30px;
+        box-shadow: $mybox-shadow;
+        border-radius: 15px;
+        height: 100%;
+        background-color: $mainContentBackgroundColor;
+        overflow-y: auto;
+    }
+}

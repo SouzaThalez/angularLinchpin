@@ -1,66 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { SimulatorsComponent } from './simulators/simulators.component';
-import { SidePanelComponent } from './side-panel/side-panel.component';
-import { TopbarComponent } from './topbar/topbar.component';
-import { RelatoriosComponent } from './relatorios/relatorios.component';
-import { SimulatorDetailsComponent } from './simulators/simulator-details/simulator-details.component';
-import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatInputModule } from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
-import {MatTableModule} from '@angular/material/table';
-import {MatDialogModule} from '@angular/material/dialog';
-import { ModalComponent } from './modal/modal.component';
-import { StatusComponent } from './status/status.component';
-import { HttpClientModule } from '@angular/common/http';
-import { ViewSimulatorModalComponent } from './modal/view-simulator-modal/view-simulator-modal.component';
-import {MatButtonModule} from '@angular/material/button';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatBadgeModule} from '@angular/material/badge';
-import { SucessModalComponent } from './modal/sucess-modal/sucess-modal.component';
-import { LoginComponent } from './login/login.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SimulatorsComponent,
-    SidePanelComponent,
-    TopbarComponent,
-    RelatoriosComponent,
-    SimulatorDetailsComponent,
-    ModalComponent,
-    StatusComponent,
-    ViewSimulatorModalComponent,
-    SucessModalComponent,
-    LoginComponent,
+  
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatNativeDateModule,
-    MatInputModule,
-    MatSelectModule,
-    MatTableModule,
-    MatDialogModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatTooltipModule,
-    MatBadgeModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
