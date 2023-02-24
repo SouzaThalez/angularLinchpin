@@ -3,9 +3,28 @@
         <div class="row">
             <div class="col left-col">
                 <div class="left-col-container">
-                    <div class="home-list">
-                      <button mat-raised-button color="primary">ok</button>
-                    </div>
+                    <ul class="home-list">
+                        <h2 class="login-tittle">Login</h2>
+                        <li>
+                            <mat-form-field class="mat-form-field">
+                                <mat-label>Seu nome</mat-label>
+                                <input matInput #loginName maxlength="20" placeholder="Ex. carlos.souza">
+                              </mat-form-field>
+                        </li>
+                        <li>
+                            <mat-form-field class="mat-form-field">
+                                <mat-label>Senha</mat-label>
+                                <input matInput #password type="password"  maxlength="10" placeholder="">
+                                <mat-hint align="end">{{password.value.length}} / 10</mat-hint>
+                              </mat-form-field>
+                              
+                        </li>
+                        <li>
+                            <button mat-raised-button color="primary" (click)="getLoginInfo(loginName.value,password.value)">Entrar</button>
+                            <a class="register-link">{{loginMessage}}</a>
+                        </li>
+                        
+                    </ul>
                 </div>
             </div>
             <div class="col right-col">
@@ -14,7 +33,6 @@
                             <p class="app-logo">Linchpin @</p>
                             <p class="app-sub-logo">Cuide da saúde do seu simulador</p>
                         </div>
-                        
                 </div>
             </div>
         </div>

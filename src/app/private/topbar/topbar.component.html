@@ -2,17 +2,23 @@
     <div class="row">
         <div class="col-4">
             <span class="app-burguer">
-                <img src="assets/imgs/icons/menu-burguer.png" alt="sww">
-              </span>
-              <span class="app-tittle-logo">
-                <h4>Linchpin Application</h4>
+                    <button class="menu-btn" mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>Menu</button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item>Sobre</button>
+                            <button mat-menu-item routerLink="/login"> Sair</button>
+                        </mat-menu>
             </span>
+             
         </div>
         <div class="col-8">
+            <span class="user-name-container">
+                <mat-icon class="user-icon">person</mat-icon>
+                <h4 class="user-name">{{appservice.logedUser?.name}}</h4>
+            </span>
             <ul class="menu-links">
-                <li routerLink="/private/home">Home</li>
-                <li routerLink="/private/simuladores">Simuladores</li>
-                <li routerLink="/private/relatorios">Relatórios</li>
+                <li routerLinkActive='active' routerLink="/private/home">Home</li>
+                <li routerLinkActive='active' routerLink="/private/simuladores">Simuladores</li>
+                <li routerLinkActive='active' routerLink="/private/relatorios">Relatórios</li>
               </ul>
         </div>
     </div>

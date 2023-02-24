@@ -15,7 +15,7 @@ import { simulatorsData } from '../../database';
 export class RelatoriosComponent implements OnInit{
 
   fromLocalStorage: any [] = [];
-  showContent = false;
+ 
   
 
   constructor( private httpClient: HttpClient){}

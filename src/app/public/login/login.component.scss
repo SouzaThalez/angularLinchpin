@@ -2,7 +2,8 @@
 .home-panel{
     height: 100%;
     .row{
-        margin: auto;
+        width: 1000px;
+        margin: 30px auto;
         .col{
             height: 500px;
             //border: 1px dotted black;
@@ -16,18 +17,31 @@
                 margin-left: 3em;
                 .home-list{
                     position: absolute;
-                    margin-top: 14em;
+                    margin-top: 10em;
                     margin-left: 4em;
-                    font-family: 'montSerratFont';
-                    font-size: 1.1em;
                     color: white;
-                    ul{
-                        li{
-                            padding:8px;
-                           span{
-                            margin-left: 10px;
-                           }
-                        }
+                    .login-tittle{
+                        width: 200px;
+                        margin: auto;
+                        font-family: 'montSerratFont';
+                        font-size: 70px;
+                        margin-bottom: 50px;
+                    }
+                    li{
+                        padding: 10px;
+                        
+                    }
+                    .mat-form-field{
+                        width: 300px;
+                    }
+                    .register-link{
+                        color: white;
+                        list-style: none;
+                        text-decoration: none;
+                        margin-left: 37px;
+                       &:hover{
+                           cursor: pointer;
+                       }
                     }
                 }
             }

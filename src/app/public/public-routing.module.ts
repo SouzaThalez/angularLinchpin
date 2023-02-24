@@ -7,7 +7,7 @@ import { PublicComponent } from './public.component';
 const routes: Routes = [
   {
     path:'',
-    component:PublicComponent,
+    component:LoginComponent,
     children:[
       {
         path: 'login',
@@ -15,7 +15,6 @@ const routes: Routes = [
         
       },
     ]
-    
   },
 ];
 

@@ -1,15 +1,7 @@
 <div class="page-tittle">
-    <h2>Status dos Simuladores</h2>
+    <h2>Condicao geral Simuladores</h2>
   </div>
-<div class="filter-form">
-    <mat-form-field>
-      <mat-label>Filtrar por Data</mat-label>
-      <mat-select>
-          <mat-option value="antigo">Mais antigo</mat-option>
-          <mat-option value="recente">Mais recente</mat-option>
-      </mat-select>
-    </mat-form-field>
-</div>
+
 <div class="status-container">
     <div class="container padding-container">
         <div class="row">
@@ -20,25 +12,37 @@
                   <div class="card-body">
                     <img class="patient-icon" src="../../assets/imgs/icons/health/criticalPatient.png" alt="">
                     O que vai fazer comigo ?
-                    
                     <p class="card-text">
                       <img src="assets/imgs/icons/viewSearch.png" alt="searchIcon">
                       <a class="view-dialog-link" (click)="openViewDialog(element.id)">Ver relatorio</a>
                     </p>
                   </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Nome: {{element.simulatorName}}</li>
-                    <li #statusElement class="list-group-item" [class.defaultColor]="isActive">Status:<span>{{valueSelected.value}}</span></li>
-                  </ul>
-                  <div class="card-footer">
-                    <span class="pdf-tittle">Definir Status: </span>
-                    <select name="dropdown" #valueSelected>
-                      <option value=" ABERTO" selected>Aberto</option>
-                        <option value=" FECHADO">FECHAR</option>
-                        <option value="PENDENTE">PENDENTE</option>
-                    </select>
-                    <button mat-stroked-button color="primary" class="btn-confirm" (click)="getStatus(valueSelected.value,statusElement)">Confirmar</button>
+                  <div *ngIf="statusAdminSelection">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Nome: {{element.simulatorName}}</li>
+                        <li #statusElement class="list-group-item" [class.defaultColor]="isActive">Status:<span>{{valueSelected.value}}</span></li>
+                      </ul>
+                      <div class="card-footer">
+                        <span class="pdf-tittle">Definir Status: </span>
+                          <select name="dropdown" #valueSelected>
+                            <option value=" ABERTO" selected>Aberto</option>
+                            <option value=" FECHADO">FECHAR</option>
+                            <option value="PENDENTE">PENDENTE</option>
+                          </select>
+                        <button mat-stroked-button color="primary" class="btn-confirm" (click)="getStatus(valueSelected.value,statusElement)">Confirmar</button>
+                      </div>
                   </div>
+
+
+                  <div *ngIf="statusUserSelection">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Nome: {{element.simulatorName}}</li>
+                      <li class="list-group-item" [class.defaultColor]="isActive">Status:<span> {{element.simulatorStatus}}</span></li>
+                    </ul>
+                    <div class="card-footer">
+                        <button class="btn-confirm" mat-stroked-button>Cuidador: {{element.userLogedName}} </button>
+                    </div>
+                </div>
                 </div>
             </div>
           </ng-container>

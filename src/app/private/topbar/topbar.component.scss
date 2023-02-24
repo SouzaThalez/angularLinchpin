@@ -16,20 +16,31 @@
 
         .app-burguer{
             margin-left: 15px;
-            img:hover{
-                cursor: pointer;
+            .menu-btn{
+                &:hover{
+                    background-color:$homeLeftContainerColor;
+                    color: white;
+                }
+                
             }
         }
-        .app-tittle-logo{
-            h4{
-                margin-left: 10px;
-                &:hover{
-                    cursor: pointer;
-                }
-            }
+       .welcome-msg{
+           margin-left: 208px;
+           margin-top: 0px;
+       }
+    }
 
+    .user-name-container{
+        display: inline-flex;
+        .user-icon{
+            margin-top: 8px;
+        }
+        .user-name{
+            margin-top: 10px;
+            margin-left: 7px;
         }
     }
+    
     .menu-links{
         float: right;
         margin-top: 1px;
@@ -42,7 +53,7 @@
             padding: 10px;
             margin-right: 10px;
 
-            &:hover{
+            &:hover, &.active{
                 cursor: pointer;
                 background-color: $homeLeftContainerColor;
                 border-radius: 4px;

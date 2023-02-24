@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
 import { AppService } from '../../services/app.service';
+
 
 
 @Component({
@@ -9,13 +10,21 @@ import { AppService } from '../../services/app.service';
   templateUrl: './side-panel.component.html',
   styleUrls: ['./side-panel.component.scss']
 })
-export class SidePanelComponent {
+export class SidePanelComponent implements OnInit{
 
   constructor(
       public dialog: MatDialog,
-      private appService: AppService
+      public appService: AppService,
     ){}
+
+    user = "user";
+    admin = "admin";
+
+  ngOnInit(): void {
   
+    
+  }
+
   openDialog(): void {
 
     const dialogRef = this.dialog.open(ModalComponent, {  
@@ -27,6 +36,9 @@ export class SidePanelComponent {
       
     });
   }
-
+  
+  openSimulatorsHistory(){
+    console.log('simulators History opend!');
+  }
 
 }

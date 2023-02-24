@@ -24,7 +24,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 
 
@@ -56,7 +59,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     MatButtonModule,
     MatTooltipModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatMenuModule,
+    MatIconModule,
   ]
 })
 export class PrivateModule { }

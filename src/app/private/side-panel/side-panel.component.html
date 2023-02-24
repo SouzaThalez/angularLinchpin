@@ -1,10 +1,12 @@
 <div class="side-panel-border">
     <div class="first-side-panel">
         <!--<span><img src="assets/imgs/icons/line-start.png" class="line-icon" alt=""></span>-->
-        <ul class="first-side-menu-list">
-          <li><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a data-bs-toggle="modal" (click)="openDialog()">Adicionar Paciente</a></li>
-          <li><img src="assets/imgs/icons/Status-icon.png" alt=""><a routerLink="status">Saúde do Paciente </a></li>
-          <hr class="horizontal-line">
+        <ul class="first-side-menu-list" [ngSwitch]="appService.logedUser.role">
+              <li *ngSwitchCase="admin"><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a data-bs-toggle="modal" (click)="openDialog()">Adicionar Simulador</a></li>
+              <li *ngSwitchCase="user"><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a (click)="openSimulatorsHistory()">Histórico</a></li>
+              <li *ngSwitchCase="user"><img src="assets/imgs/icons/Status-icon.png" alt=""><a routerLink="status">Saúde do Simulador </a></li>
+              <li *ngSwitchCase="admin"><img src="assets/imgs/icons/Status-icon.png" alt=""><a routerLink="status">Saúde dos Simuladores </a></li>
+              <hr class="horizontal-line">
         </ul>
        
     </div>

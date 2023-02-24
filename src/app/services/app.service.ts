@@ -5,6 +5,12 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class AppService {
+
+  
   onNewSimulator = new Subject();
+
+  logedUser: any = {};
+  userIDfromLocal: any;
+
   constructor() { }
 }

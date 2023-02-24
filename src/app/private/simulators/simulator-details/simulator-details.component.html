@@ -24,11 +24,10 @@
                           <mat-select [(ngModel)]= "simulatorCode">
                             <!--The [value} property is important! -->
                             <mat-option #option  *ngFor="let element of simulator.simulatorCodes; let i = index"
-                                    [value] = "element" (click)="getMatOptionElement(option)">
+                                    [value] = "element" (click)="getMatOptionElement(option,i)">
                                     {{element}} 
                             </mat-option>
                           </mat-select>
-                         
                       </mat-form-field>
                   </li>
                   
@@ -189,9 +188,12 @@
             </table> 
             
         </div>
+    
+
+
         <div class="gerar-relatorio-btn-container">
             <div class="btns-relatorio">
-                <button mat-raised-button routerLink="/simuladores">Voltar</button>
+                <button mat-raised-button routerLink="/private/simuladores">Voltar</button>
                 <button mat-raised-button color="primary" (click)="onSubmit()">Gerar Relatorio</button>
                 
             </div>

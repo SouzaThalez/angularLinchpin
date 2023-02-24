@@ -59,7 +59,6 @@ export const simulatorsData =[
 ]
 
 
-
 export class simulatorsAdded{
     simulatorName: string;
     simulatorCodes: Array<string>;
@@ -79,15 +78,19 @@ export class simulatorsAdded{
 export class formuData{
   formValues: Array<string>;
   formDate: string; 
-  formCode: string;
-  formNames: Array <string>;
+  formCode: Array<string>;
+  formTableNames: Array <string>;
   simulatorName: string;
+  userLogedName: string;
+  simulatorStatus: string;
 
   constructor(){
     this.formValues = [];
     this.formDate = '';
-    this.formCode = '';
-    this.formNames = [];
+    this.formCode = [];
+    this.formTableNames = [];
     this.simulatorName = '';
+    this.userLogedName = '';
+    this.simulatorStatus = '';
   }
 }

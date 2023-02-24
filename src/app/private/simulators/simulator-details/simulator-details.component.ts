@@ -9,6 +9,7 @@ import { elementAt, findIndex } from 'rxjs';
 import {simulatorsAdded, simulatorsData,formuData } from 'src/app/database';
 import { MatDialog } from '@angular/material/dialog';
 import { SucessModalComponent } from '../../modal/sucess-modal/sucess-modal.component';
+import { AppService } from 'src/app/services/app.service';
 
 
 @Component({
@@ -49,42 +50,74 @@ export class SimulatorDetailsComponent implements OnInit {
   auscultaPulmonarValue: any;
 
   //Coming from dropdown code list
-  matOptionElement: any;  
+  matOptionElement: any;
+  matOptionElementIndex: any;  
   defaultOption = 'Escolha!';
   // Global Array of Object
   tableNames: any[] =[];
   simulator: any;
   arraySize = 0;
-
+  userLoged = '';
+  updatedFormCodes: any[] =[];
   constructor(
       private activatedRoute: ActivatedRoute,
       private httpClient: HttpClient,
-      public dialog: MatDialog
+      public dialog: MatDialog,
+      private appService: AppService
       ) {}
  
 
   ngOnInit(): void { 
-
+    
     const id = this.activatedRoute.snapshot.params["code"];
-
+    this.userLoged =  this.appService.logedUser.name;
+    
+    
     // This is a promise to the server! 
     // The code above this functio will continue and not stop! 
     this.httpClient.get('http://localhost:3000/simulatorsAdded')
     .subscribe({
         //if request is ok
         next: (sample: any ) =>{ 
-            console.log('request ok! ', sample)
+            console.log('simulators added request ok! ', sample)
             this.simulator = sample.find((element: any) =>{
-            return element.id == id; 
+              return element.id == id; 
             });
-
             this.arraySize = this.simulator.simulatorCodes.length;
         },
         //if request is not ok
         error: (erro: any) =>{console.log('request NOT good!',erro)}
     })
     
-    //Numero fixo de itens
+
+    //find a way to store the index of simulatorCodes in a array 
+    // than display that array of codes and disable them!!
+    this.httpClient.get('http://localhost:3000/formData')
+    .subscribe({
+        //if request is ok
+        next: (sample: any ) =>{ 
+
+            console.log('second request to form data:', sample)
+           for (let index = 0; index < sample.length; index++) {
+                const element = sample[index];
+                if (element.simulatorName == 'simMan3G') {
+                   console.log(element);
+                  //this.updatedFormCodes.push(element.formCode[1]);
+                }
+
+           }
+
+           console.log('thisupdatedformcodes',this.updatedFormCodes);
+        },
+        //if request is not ok
+        error: (erro: any) =>{console.log('request NOT good!',erro)}
+    })
+    
+
+
+
+
+      //Numero fixo de itens
       this.tableNames.push(
         this.tableName1,
         this.tableName2,
@@ -105,11 +138,12 @@ export class SimulatorDetailsComponent implements OnInit {
     this.dateInputElement = dateElement;
     
   }
-  getMatOptionElement(value: any){
+  getMatOptionElement(value: any,index:any){
     //store matOptionElement on a external variable!
     this.matOptionElement = value;
+    this.matOptionElementIndex = index.toString();
+    console.log(this.matOptionElementIndex);
   }
-
   openSucessModal(a:boolean, b:boolean): void {
 
     const dialogRef = this.dialog.open(SucessModalComponent, {
@@ -132,13 +166,9 @@ export class SimulatorDetailsComponent implements OnInit {
     
     //New instance of Class 
     let formData = new formuData();
-    //Cheking if what is coming from code is empty
-    //if is empty - set is value to null
-    if(this.simulatorCode == ''){
-      this.simulatorCode = null
-    }
+  
  
-    temporaryForm.push( 
+      temporaryForm.push( 
       //SimulatorCode and dateInput is here
       //For the check null loop!!  
       this.simulatorCode,
@@ -153,11 +183,10 @@ export class SimulatorDetailsComponent implements OnInit {
       this.bordasChoqueValue,
       this.auscultaCardiacaValue,
       this.auscultaPulmonarValue,
-    );
+      );
        
       //Populate temporary form 
       for (let index = 0; index < temporaryForm.length; index++) {
-   
         const element = temporaryForm[index];
         if(element == null){
           count++
@@ -167,23 +196,21 @@ export class SimulatorDetailsComponent implements OnInit {
         }
       }
 
-     
-
       //SHOW MODAL WITH ERRO MESSAGES!
          switch (count) {
           case 0:
-            alert('Nao existem campos vazios!');
+            //alert('Nao existem campos vazios!');
             this.openSucessModal(true,false);
-
-              formData.formCode = this.simulatorCode;
-              formData.formNames = this.tableNames;
+              formData.formCode.push(this.simulatorCode,this.matOptionElementIndex);
+              formData.formTableNames = this.tableNames;
               formData.formDate = this.dateInput;
               formData.simulatorName = this.simulator.simulatorName;
-
+              formData.userLogedName = this.userLoged;
+              formData.simulatorStatus = 'ABERTO';
               this.httpClient.post('http://localhost:3000/formData',formData)
               .subscribe({
                   next:(sample: any)=>{
-                    console.log('requisicao com sucesso! ', sample)
+                    console.log('requisicao com sucesso! ', sample);
                   },
             
                   error:(erroSample: any)=>{console.log('ERRO na requisicao!',erroSample)}

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { simulatorsData } from '../../database';
 import { AppService } from '../../services/app.service';
 
 @Component({
