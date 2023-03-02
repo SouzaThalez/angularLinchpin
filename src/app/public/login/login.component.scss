@@ -23,7 +23,7 @@
                     .login-tittle{
                         width: 200px;
                         margin: auto;
-                        font-family: 'montSerratFont';
+                        font-family: 'exoDemiBold';
                         font-size: 70px;
                         margin-bottom: 50px;
                     }
@@ -56,20 +56,10 @@
                 margin-left: -20em;
                 margin-top: 6em;
                 .center-content{
-                    margin-top: 13em;
-                    margin-left: 5em;
-                    .app-logo{
-                        font-family: 'monotonFont';
-                        font-size: 70px;
-                    }
-                    .app-sub-logo{
-                        margin-top: 35px;
-                        font-family: 'twinkleFont';
-                        font-weight: bold;
-                        font-size: 20px;
-                        color: $homeLeftContainerColor;
-                        margin-left: 30%;
-                    }
+                    margin-top: 5em;
+                    margin-left: 2em;
+                    font-family:'exoRegular';
+                
                 }
             }
         }

@@ -1,6 +1,5 @@
-.page-tittle{
-    
-}
+
+@import '../../../assets/scss/variables';
 .filter-form{
     margin-left: 30px;
 }
@@ -31,7 +30,7 @@
             }
         }
         .defaultColor{
-            background-color: #D1495B;
+            background-color: $homeLeftContainerColor;
             color: white;
         }
         .card-footer{

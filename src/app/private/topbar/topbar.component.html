@@ -5,16 +5,12 @@
                     <button class="menu-btn" mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>Menu</button>
                         <mat-menu #menu="matMenu">
                             <button mat-menu-item>Sobre</button>
-                            <button mat-menu-item routerLink="/login"> Sair</button>
+                            <button mat-menu-item routerLink="/login"> <strong>Sair</strong></button>
                         </mat-menu>
             </span>
              
         </div>
         <div class="col-8">
-            <span class="user-name-container">
-                <mat-icon class="user-icon">person</mat-icon>
-                <h4 class="user-name">{{appservice.logedUser?.name}}</h4>
-            </span>
             <ul class="menu-links">
                 <li routerLinkActive='active' routerLink="/private/home">Home</li>
                 <li routerLinkActive='active' routerLink="/private/simuladores">Simuladores</li>

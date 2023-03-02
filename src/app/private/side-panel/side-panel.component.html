@@ -1,7 +1,14 @@
 <div class="side-panel-border">
+    <ul class="user-loged-container">
+      <li>
+        <mat-icon class="user-icon">person</mat-icon>
+        <h4 class="user-name"> Olá {{appService.logedUser?.name}}</h4>
+      </li>
+    </ul>
     <div class="first-side-panel">
         <!--<span><img src="assets/imgs/icons/line-start.png" class="line-icon" alt=""></span>-->
         <ul class="first-side-menu-list" [ngSwitch]="appService.logedUser.role">
+              <hr class="horizontal-line">
               <li *ngSwitchCase="admin"><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a data-bs-toggle="modal" (click)="openDialog()">Adicionar Simulador</a></li>
               <li *ngSwitchCase="user"><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a (click)="openSimulatorsHistory()">Histórico</a></li>
               <li *ngSwitchCase="user"><img src="assets/imgs/icons/Status-icon.png" alt=""><a routerLink="status">Saúde do Simulador </a></li>

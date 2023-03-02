@@ -1,10 +1,6 @@
 @import './variables';
 
 @font-face {
-    font-family: 'monotonFont';
-    src: url('../../assets/monoton-regular.ttf');
-  }
-@font-face {
     font-family: 'montSerratFont';
     src: url('../../assets/Montserrat-variableFont.ttf');
   }
@@ -15,4 +11,12 @@
 @font-face {
   font-family: 'twinkleFont';
   src: url('../TwinkleStar-Regular.ttf');
+}
+@font-face {
+  font-family: 'exoDemiBold';
+  src: url('../Exo-DemiBold.otf');
+}
+@font-face {
+  font-family: 'exoRegular';
+  src: url('../Exo-Regular.otf');
 }

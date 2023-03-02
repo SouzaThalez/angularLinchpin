@@ -8,10 +8,19 @@
     width: $sidebar-width;
     height: 100%;
     //box-shadow: $box-shadow;
-    
+    .user-loged-container{
+        margin-top: 3em;
+        margin-left: 1em;
+       li{
+           display: inline-flex;
+           .user-name{
+               margin-left: 4px;
+           }
+       }
+    }
     .first-side-panel{
         
-        margin-top: 4em;
+        margin-top: 2em;
 
         .first-side-menu-list{
             list-style: none;

@@ -33,7 +33,11 @@
                     font-family: 'montSerratFont';
                     font-size: 1.1em;
                     color: white;
+                    span{
+                        margin-left: 10px;
+                       }
                     ul{
+                        margin-top: 15px;
                         li{
                             padding:8px;
                            span{
@@ -54,20 +58,9 @@
                 margin-left: -20em;
                 margin-top: 6em;
                 .center-content{
-                    margin-top: 13em;
-                    margin-left: 5em;
-                    .app-logo{
-                        font-family: 'monotonFont';
-                        font-size: 70px;
-                    }
-                    .app-sub-logo{
-                        margin-top: 35px;
-                        font-family: 'twinkleFont';
-                        font-weight: bold;
-                        font-size: 20px;
-                        color: $homeLeftContainerColor;
-                        margin-left: 30%;
-                    }
+                    margin-top: 5em;
+                    margin-left: 2em;
+                    font-family:'exoRegular';
                 }
             }
         }

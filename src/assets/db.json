@@ -230,11 +230,45 @@
       "userLogedName": "Thales",
       "simulatorStatus": "ABERTO",
       "id": 5
+    },
+    {
+      "formValues": [
+        "weq344",
+        "2023-02-22T03:00:00.000Z",
+        "Pulso Fraco",
+        "Pulso Fraco",
+        "Pulso Fraco",
+        "Pulso Fraco",
+        "Parou de Funcionar",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Nenhuma Falha"
+      ],
+      "formDate": "2023-02-22T03:00:00.000Z",
+      "formCode": [
+        "weq344",
+        "1"
+      ],
+      "formTableNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "ressusciAnne",
+      "userLogedName": "Kenia",
+      "simulatorStatus": "ABERTO",
+      "id": 6
     }
   ],
-
-
-
   "simulatorsAdded": [
     {
       "simulatorName": "simManALs",
@@ -330,9 +364,6 @@
       "id": 8
     }
   ],
-
-
-  
   "users": [
     {
       "loginName": "thales.carvalho",
