@@ -2,7 +2,7 @@
 <ng-container>
         <h1 mat-dialog-title>Resume do relatorio</h1>
         <div mat-dialog-content>
-        <p>Seu simulador "{{statusFormData.simulatorName}} com o registro de Codigo "{{statusFormData.formCode}}". Apresentou as seguintes falhas no dia "{{statusFormData.formDate | date}}". </p>
+        <p>Seu simulador "{{statusFormData.simulatorName}} com o registro de Codigo "{{statusFormData.formCode}}". Apresentou as seguintes falhas no dia "{{statusFormData.formDate  | date:'mediumDate'}}". </p>
             <h3>Resume das Falhas </h3>
 
             <div class="col table-colums">

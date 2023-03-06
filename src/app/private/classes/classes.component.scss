@@ -1,0 +1,39 @@
+@import '../../../assets/scss/variables';
+    .first-container{
+        background-color: white;
+        box-shadow: $mybox-shadow;
+        border-radius: 10px;
+        .add-th{
+            //border: 1px dotted black;
+        }
+        .add-classes{
+            //border: 1px dotted black;
+           mat-form-field{
+               margin-right: 5px;
+           }
+        }
+        .classes-btns{
+            width: 200px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .second-container{
+        margin-top: 50px;
+        .side-colum{
+        //border: 1px dotted black;
+            .classes-btns{
+                width: 200px;
+                margin-bottom: 15px;
+            }
+        }
+        .main-colum{
+        //border: 1px dotted black;
+            .add-class-btn{
+                margin-top: 30px;
+                float: right;
+            }
+        }
+    }
+
+

@@ -386,5 +386,18 @@
       "role": "user",
       "id": 3
     }
-  ]
+  ],
+  "tableMaterialFormData": [
+    {
+      "item": "ceded",
+      "quantity": "ede",
+      "id": 1
+    },
+    {
+      "item": "luvas",
+      "quantity": "10 unidades",
+      "id": 2
+    }
+  ],
+  "classes": []
 }

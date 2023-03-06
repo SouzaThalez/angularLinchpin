@@ -26,6 +26,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import { ClassesComponent } from './classes/classes.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 
 
@@ -44,6 +48,7 @@ import {MatIconModule} from '@angular/material/icon';
     StatusComponent,
     ViewSimulatorModalComponent,
     SucessModalComponent,
+    ClassesComponent,
   ],
   imports: [
     CommonModule,
@@ -62,6 +67,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatBadgeModule,
     MatMenuModule,
     MatIconModule,
+    MatExpansionModule,
+    MatTabsModule
   ]
 })
 export class PrivateModule { }

@@ -14,7 +14,7 @@
                         <li>
                             <mat-form-field class="mat-form-field">
                                 <mat-label>Senha</mat-label>
-                                <input matInput #password type="password"  maxlength="10" placeholder="">
+                                <input matInput #password (keyup.enter)="getLoginInfo(loginName.value,password.value)" type="password"  maxlength="10" placeholder="">
                                 <mat-hint align="end">{{password.value.length}} / 10</mat-hint>
                               </mat-form-field>
                               

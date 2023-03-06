@@ -10,6 +10,9 @@ import {simulatorsAdded, simulatorsData,formuData } from 'src/app/database';
 import { MatDialog } from '@angular/material/dialog';
 import { SucessModalComponent } from '../../modal/sucess-modal/sucess-modal.component';
 import { AppService } from 'src/app/services/app.service';
+import flatpickr from 'flatpickr';
+
+
 
 
 @Component({
@@ -59,11 +62,17 @@ export class SimulatorDetailsComponent implements OnInit {
   arraySize = 0;
   userLoged = '';
   updatedFormCodes: any[] =[];
+
+
+
+
   constructor(
       private activatedRoute: ActivatedRoute,
       private httpClient: HttpClient,
       public dialog: MatDialog,
-      private appService: AppService
+      private appService: AppService,
+
+      
       ) {}
  
 
@@ -71,7 +80,7 @@ export class SimulatorDetailsComponent implements OnInit {
     
     const id = this.activatedRoute.snapshot.params["code"];
     this.userLoged =  this.appService.logedUser.name;
-    
+  
     
     // This is a promise to the server! 
     // The code above this functio will continue and not stop! 
@@ -134,9 +143,9 @@ export class SimulatorDetailsComponent implements OnInit {
   }
 
   gettingDate($event: any, dateElement: any){
-    this.dateInput = $event.target.value;
+    this.dateInput = $event.value;
     this.dateInputElement = dateElement;
-    
+    console.log(this.dateInput);
   }
   getMatOptionElement(value: any,index:any){
     //store matOptionElement on a external variable!

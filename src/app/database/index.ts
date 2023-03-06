@@ -1,3 +1,4 @@
+import { CloseScrollStrategy } from "@angular/cdk/overlay";
 import { HttpClientModule } from "@angular/common/http";
 
 export const simulatorsData =[
@@ -94,3 +95,75 @@ export class formuData{
     this.simulatorStatus = '';
   }
 }
+
+
+
+
+export class Classes{
+  name: string;
+  textHeader: string;
+  classMaterial: Array<string>;
+  classSimulators: Array<string>;
+  classStorage: Array<string>;
+
+  constructor(){
+    this.name ='';
+    this.textHeader = '';
+    this.classMaterial = [];
+    this.classSimulators = [];
+    this.classStorage = [];
+  }
+}
+
+export class Material{
+  item: string;
+  quantity: string;
+  constructor(){
+    this.item = '';
+    this.quantity = '';
+  }
+}
+
+export class MaterialAdded{
+  item: string;
+  quantity: string;
+  constructor(){
+    this.item = '';
+    this.quantity = '';
+  }
+}
+
+
+//using in Classes Component!
+export const tableMaterialFormData = [
+  {
+    
+    item: 'gorro, máscara, avental e óculos de proteção',
+    quantity: '100uni',
+  },
+  {
+    item: 'luvas de procedimento',
+    quantity: '15 uni',
+    
+  },
+  {
+    item:'gaze',
+    quantity:'15 uni'
+  }
+]
+
+export const tableSimulatorsFormData=[
+  {
+    simulator: 'Ressusci Anne',
+    total:2
+  },
+  {
+    simulator: 'SimJunior',
+    total:3
+  },
+  {
+    simulator: 'Monitor Cardiaco',
+    total:1
+  }
+]
+

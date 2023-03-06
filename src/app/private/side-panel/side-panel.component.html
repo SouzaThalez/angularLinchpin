@@ -9,10 +9,11 @@
         <!--<span><img src="assets/imgs/icons/line-start.png" class="line-icon" alt=""></span>-->
         <ul class="first-side-menu-list" [ngSwitch]="appService.logedUser.role">
               <hr class="horizontal-line">
-              <li *ngSwitchCase="admin"><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a data-bs-toggle="modal" (click)="openDialog()">Adicionar Simulador</a></li>
-              <li *ngSwitchCase="user"><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a (click)="openSimulatorsHistory()">Histórico</a></li>
-              <li *ngSwitchCase="user"><img src="assets/imgs/icons/Status-icon.png" alt=""><a routerLink="status">Saúde do Simulador </a></li>
-              <li *ngSwitchCase="admin"><img src="assets/imgs/icons/Status-icon.png" alt=""><a routerLink="status">Saúde dos Simuladores </a></li>
+              <li *ngSwitchCase="admin" data-bs-toggle="modal" (click)="openDialog()"><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a>Adicionar Simulador</a></li>
+              <li *ngSwitchCase="user"(click)="openSimulatorsHistory()"><img src="assets/imgs/icons/AddSimulator-icon.png" alt=""><a>Histórico</a></li>
+              <li *ngSwitchCase="user" routerLink="status"><img src="assets/imgs/icons/Status-icon.png" alt=""><a>Saúde do Simulador </a></li>
+              <li *ngSwitchCase="admin" routerLink="status"><img src="assets/imgs/icons/Status-icon.png" alt=""><a>Saúde dos Simuladores </a></li>
+              <li *ngSwitchCase="admin" routerLink="aulas"><img src="assets/imgs/icons/Status-icon.png" alt=""><a>Aulas </a></li>
               <hr class="horizontal-line">
         </ul>
        

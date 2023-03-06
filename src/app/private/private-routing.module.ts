@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ClassesComponent } from './classes/classes.component';
 import { HomeComponent } from './home/home.component';
 import { PrivateComponent } from './private.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
@@ -33,6 +34,10 @@ const routes: Routes = [
         path: 'status',
         component:StatusComponent
       },
+      {
+        path: 'aulas',
+        component: ClassesComponent
+      }
     
     ]
   },

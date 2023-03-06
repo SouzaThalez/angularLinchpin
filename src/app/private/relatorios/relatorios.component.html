@@ -15,7 +15,7 @@
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">Registro: {{element.formCode}}</li>
-                    <li class="list-group-item">Data abertura: {{element.formDate | date}}</li>
+                    <li class="list-group-item">Data abertura: {{element.formDate | date:'mediumDate'}}</li>
                   </ul>
                   <div class="card-footer">
                     <button class="download-btn" mat-stroked-button (click)="generatePDF(i)">PDF Download</button>
