@@ -29,6 +29,11 @@ import {MatIconModule} from '@angular/material/icon';
 import { ClassesComponent } from './classes/classes.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTabsModule} from '@angular/material/tabs';
+import { ClassesKitComponent } from './classes/classes-kit/classes-kit.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatListModule} from '@angular/material/list';
+
 
 
 
@@ -49,6 +54,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     ViewSimulatorModalComponent,
     SucessModalComponent,
     ClassesComponent,
+    ClassesKitComponent,
   ],
   imports: [
     CommonModule,
@@ -68,7 +74,10 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatMenuModule,
     MatIconModule,
     MatExpansionModule,
-    MatTabsModule
+    MatTabsModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatListModule
   ]
 })
 export class PrivateModule { }

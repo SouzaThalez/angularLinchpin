@@ -15,12 +15,12 @@
             <button class="classes-btns" mat-raised-button (click)="addNewClass(newClass)">Adicionar</button>
         </div>
         <div class="col-9 add-classes">
-                <p>Novo Material</p>
+                <p>Materiais Necessários</p>
                 <div class="container">
                         <mat-form-field appearance="fill">
                             <mat-label>Selecione Lista</mat-label>
-                            <mat-select [(ngModel)]="selectedListValue">
-                                <mat-option [value]= "element" *ngFor= "let element of classesNames">{{element}}</mat-option>
+                            <mat-select>
+                                <mat-option #matOption (click)="classListOption(matOption)" [value]= "element" *ngFor= "let element of classesFromJson">{{element.name}}</mat-option>
                             </mat-select>
                         </mat-form-field>
                         
@@ -34,6 +34,32 @@
                             <input matInput #itemQuantity>
                         </mat-form-field>
                         <button class="classes-btns" mat-raised-button (click)="getMaterialFormValues(itemName,itemQuantity)">Novo Material</button>
+                </div>
+                <p>Simuladores Necessários</p>
+                <div class="container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Selecione Lista</mat-label>
+                            <mat-select>
+                                <mat-option #matOption (click)="classListOption(matOption)" [value]= "element" *ngFor= "let element of classesFromJson">{{element.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        
+                        <mat-form-field appearance="fill">
+                            <mat-label>Nome do Simulador</mat-label>
+                            <mat-select [(ngModel)]="selectedSimulator">
+                                <mat-option value = "Ressusci Anne" >Ressusci Anne</mat-option>
+                                <mat-option value = "Nurse Anne" >Nurse Anne</mat-option>
+                                <mat-option value = "Mega Code Kelly" >Mega Code Kelly</mat-option>
+                                <mat-option value = "Mega Code Kid" >Mega Code Kid</mat-option>
+                                <mat-option value = "Hurt queimadura" >Hurt queimadura</mat-option>
+                            </mat-select>
+                            
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Quantidade</mat-label>
+                            <input matInput #simulatorQuantity>
+                        </mat-form-field>
+                        <button class="classes-btns" mat-raised-button (click)="getSimulatorFormValues(simulatorQuantity)">Novo Simulador</button>
                 </div>
         </div>
     </div>
@@ -84,17 +110,17 @@
                                 </table>
                             </mat-tab>
                             <mat-tab label="Simuladores Necessários"> 
-                                <table mat-table [dataSource]="simulatorTable" class="mat-elevation-z8">
+                                <table mat-table [dataSource]="classe.classSimulators" class="mat-elevation-z8">
                                     <!-- item Column -->
                                      <ng-container matColumnDef="item">
                                        <th mat-header-cell *matHeaderCellDef> </th>
-                                       <td mat-cell *matCellDef="let element"> {{element.simulator}} </td>
+                                       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
                                      </ng-container>
      
                                      <!-- quantity Column -->
                                      <ng-container matColumnDef="quantity">
                                        <th mat-header-cell *matHeaderCellDef> </th>
-                                       <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+                                       <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
                                      </ng-container>
                                      <tr mat-header-row *matHeaderRowDef="tableMaterialNames"></tr>
                                      <tr mat-row *matRowDef="let row; columns: tableMaterialNames;"></tr>
@@ -102,7 +128,7 @@
                             </mat-tab>
                             <mat-tab label="Em armazenamento"> Content 3 </mat-tab>
                         </mat-tab-group>
-                        <button class="add-class-btn" mat-raised-button color="primary"> Montar Aula!</button>
+                        <button class="add-class-btn" mat-raised-button color="primary" routerLink="/private/aulas/{{classe.id}}"> Montar Aula!</button>
                         </mat-expansion-panel>
                     </mat-accordion>
                     <hr>

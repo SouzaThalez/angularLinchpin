@@ -123,6 +123,14 @@ export class Material{
     this.quantity = '';
   }
 }
+export class Simulator{
+  name: string;
+  quantity: number;
+  constructor(){
+    this.name = '';
+    this.quantity = 0;
+  }
+}
 
 export class MaterialAdded{
   item: string;

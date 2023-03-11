@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatTabLabelWrapper } from '@angular/material/tabs';
 import { elementAt } from 'rxjs';
-import {Classes, Material,MaterialAdded, tableMaterialFormData, tableSimulatorsFormData} from 'src/app/database';
+import {Classes, Material,MaterialAdded, Simulator, tableMaterialFormData, tableSimulatorsFormData} from 'src/app/database';
 
 @Component({
   selector: 'app-classes',
@@ -14,17 +14,18 @@ export class ClassesComponent implements OnInit{
 //global html variables!
   panelOpenState = false;
   tableMaterialNames: any[] =['item','quantity'];
-  classesNames: any[] = [];
+  //classesNames: any[] = [];
   tableItems: any;
   classesFromJson: any;
   simulatorTable: any;
 
-// Novo material form  values
-  selectedListValue: any;
+// Coming from classListOption()
+  selectedListID: any;
 // Add TH form Values
   inpuClassName = '';
   inputPeriodName = '';
-
+// new simulator selected input
+  selectedSimulator: any;
 
 
   constructor( private httpClient: HttpClient){}
@@ -65,8 +66,8 @@ export class ClassesComponent implements OnInit{
       let newClass = new Classes();
       newClass.name = className;
       //add to the selectedList Input
-      this.classesNames.push(className);
-      console.log('swsw',this.classesNames);
+      //this.classesNames.push(className);
+      //console.log('classes names',this.classesNames);
       this.postClassesToJson(newClass);
       alert('Nova Aula adicionada!');
       this.ngOnInit();
@@ -81,6 +82,10 @@ export class ClassesComponent implements OnInit{
     this.inputPeriodName = periodName;
   }
 
+  classListOption(matOption: any){
+      this.selectedListID = matOption.value.id;
+      console.log(this.selectedListID);
+  }
 
 
   getMaterialFormValues(nameInputElement: any, itemSumInputElement: any){
@@ -88,8 +93,11 @@ export class ClassesComponent implements OnInit{
       let item = nameInputElement.value;
       let total = itemSumInputElement.value;
 
-      let selectedListIndex = this.classesNames.findIndex((element) => element == this.selectedListValue)
-      let jsonPosition = selectedListIndex + 1;
+
+   
+
+      ///let selectedListIndex = this.classesNames.findIndex((element) => element == this.selectedListValue)
+     // let jsonPosition = selectedListIndex + 1;
      
 
       //new instance of Class Material 
@@ -98,11 +106,15 @@ export class ClassesComponent implements OnInit{
       newMaterial.quantity = total;
       //getting class from JSON without endpoints!
       let classObj = this.classesFromJson;
-      classObj[selectedListIndex].classMaterial.push(newMaterial);
+      //the normalInteration value here should be the normal index array of classObject -1 
+      //the classObj follows the normal flow of index position, so it starts in 0 !
+      let normalInterationValue = this.selectedListID - 1;
+      classObj[normalInterationValue].classMaterial.push(newMaterial);
     
+     
       //console.log('objeto',classObj[selectedListIndex]);
     
-      this.httpClient.put('http://localhost:3000/classes/'+ jsonPosition,classObj[selectedListIndex])
+      this.httpClient.put('http://localhost:3000/classes/'+ this.selectedListID,classObj[normalInterationValue])
       .subscribe({
         //if request is true
           next: (sample: any)=>{
@@ -112,14 +124,47 @@ export class ClassesComponent implements OnInit{
         //if request is false
           error: (erro)=>{console.log('classes put request not ok: ',erro);}
       })
+
+      
   
       // Clean inputs Field
-      this.selectedListValue =  null;
+      //this.selectedListValue =  null;
       nameInputElement.value = null;
       itemSumInputElement.value = null;
   }
-  
+  getSimulatorFormValues(simulatorSumInput: any){
 
+        let simulatorNumber = simulatorSumInput.value;
+        let simulatorName = this.selectedSimulator;
+
+        let newSimulator = new Simulator();
+        newSimulator.name = simulatorName;
+        newSimulator.quantity = simulatorNumber;
+
+        let classesObject = this.classesFromJson;
+        let normalInteration = this.selectedListID - 1;
+        classesObject[normalInteration].classSimulators.push(newSimulator);
+
+        this.httpClient.put('http://localhost:3000/classes/'+ this.selectedListID,classesObject[normalInteration])
+        .subscribe({
+          //if request is true
+            next: (sample: any)=>{
+              console.log('classes put request ok: ',sample);
+              this.ngOnInit();
+            },
+          //if request is false
+            error: (erro)=>{console.log('classes put request not ok: ',erro);}
+        })
+
+
+
+
+
+        console.log(newSimulator);
+
+
+  }
+  
 
 
 

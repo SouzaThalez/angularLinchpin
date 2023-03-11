@@ -6,7 +6,7 @@
     <div class="container padding-container">
         <div class="row">
           <!--ng container tag for using ngFor without repeating the element-->
-          <ng-container *ngFor="let element of formData">
+          <ng-container *ngFor="let element of formData let indexPosition = index">
             <div class="col">
                 <div class="card">
                   <div class="card-body">
@@ -20,23 +20,22 @@
                   <div *ngIf="statusAdminSelection">
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">Nome: {{element.simulatorName}}</li>
-                        <li #statusElement class="list-group-item" [class.defaultColor]="isActive">Status:<span>{{valueSelected.value}}</span></li>
+                        <li #liStatusElement class="list-group-item" [class.defaultColor]="isActive">Status:<span>{{valueSelected.value}}</span></li>
                       </ul>
                       <div class="card-footer">
                         <span class="pdf-tittle">Definir Status: </span>
                           <select name="dropdown" #valueSelected>
-                            <option value=" ABERTO" selected>Aberto</option>
-                            <option value=" FECHADO">FECHAR</option>
+                            <option value="ABERTO" selected>Aberto</option>
+                            <option value="FECHADO">FECHAR</option>
                             <option value="PENDENTE">PENDENTE</option>
                           </select>
-                        <button mat-stroked-button color="primary" class="btn-confirm" (click)="getStatus(valueSelected.value,statusElement)">Confirmar</button>
+                        <button mat-stroked-button color="primary" class="btn-confirm" (click)="getStatus(valueSelected.value,liStatusElement,indexPosition,element)">Confirmar</button>
                       </div>
                   </div>
 
-
                   <div *ngIf="statusUserSelection">
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Nome: {{element.simulatorName}}</li>
+                      <li class="list-group-item">Simulador: {{element.simulatorName}}</li>
                       <li class="list-group-item" [class.defaultColor]="isActive">Status:<span> {{element.simulatorStatus}}</span></li>
                     </ul>
                     <div class="card-footer">

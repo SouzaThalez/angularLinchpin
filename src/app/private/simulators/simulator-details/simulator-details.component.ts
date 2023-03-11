@@ -167,7 +167,6 @@ export class SimulatorDetailsComponent implements OnInit {
       
     });
   }
-
   onSubmit(){
 
     let count = 0;
@@ -195,13 +194,28 @@ export class SimulatorDetailsComponent implements OnInit {
       );
        
       //Populate temporary form 
+      
       for (let index = 0; index < temporaryForm.length; index++) {
         const element = temporaryForm[index];
         if(element == null){
           count++
         }else{
-          formData.formValues.push(element);
-          console.log(formData);
+          //this switch statment will prevent date and code formValues to get
+          //inserted in the formValues jSON ARRAY 
+          switch (element) {
+            case this.simulatorCode:
+              console.log('you chosse code?',this.simulatorCode);
+              break;
+              case this.dateInput:
+                console.log('you chosse date?',this.simulatorCode);
+                break;
+          
+            default:
+              formData.formValues.push(element);
+              console.log(formData);
+              break;
+          }
+         
         }
       }
 
@@ -210,6 +224,7 @@ export class SimulatorDetailsComponent implements OnInit {
           case 0:
             //alert('Nao existem campos vazios!');
             this.openSucessModal(true,false);
+            
               formData.formCode.push(this.simulatorCode,this.matOptionElementIndex);
               formData.formTableNames = this.tableNames;
               formData.formDate = this.dateInput;

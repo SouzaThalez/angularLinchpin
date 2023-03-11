@@ -89,7 +89,7 @@
         "Ausculta Pulmonar"
       ],
       "simulatorName": "simNewB",
-      "simulatorStatus": "ABERTO",
+      "simulatorStatus": "FECHADO",
       "id": 1
     },
     {
@@ -228,7 +228,7 @@
       ],
       "simulatorName": "SimBaby",
       "userLogedName": "Thales",
-      "simulatorStatus": "ABERTO",
+      "simulatorStatus": "FECHADO",
       "id": 5
     },
     {
@@ -267,6 +267,149 @@
       "userLogedName": "Kenia",
       "simulatorStatus": "ABERTO",
       "id": 6
+    },
+    {
+      "formValues": [
+        "HGJOKD",
+        "2023-03-22T03:00:00.000Z",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-03-22T03:00:00.000Z",
+      "formCode": [
+        "HGJOKD",
+        "1"
+      ],
+      "formTableNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "simManALs",
+      "userLogedName": "Thales",
+      "simulatorStatus": "FECHADO",
+      "id": 7
+    },
+    {
+      "formValues": [
+        "123232",
+        "2023-03-23T03:00:00.000Z",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Pulso Fraco",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-03-23T03:00:00.000Z",
+      "formCode": [
+        "123232",
+        "1"
+      ],
+      "formTableNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "simJunior",
+      "userLogedName": "Thales",
+      "simulatorStatus": "ABERTO",
+      "id": 8
+    },
+    {
+      "formValues": [
+        "Parou de Funcionar",
+        "Pulso Fraco",
+        "Pulso Fraco",
+        "Parou de Funcionar",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-03-11T03:00:00.000Z",
+      "formCode": [
+        "5643",
+        "0"
+      ],
+      "formTableNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "nurseAnne",
+      "simulatorStatus": "FECHADO",
+      "id": 9
+    },
+    {
+      "formValues": [
+        "Parou de Funcionar",
+        "Pulso Fraco",
+        "Pulso Fraco",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-03-16T03:00:00.000Z",
+      "formCode": [
+        "123232",
+        "1"
+      ],
+      "formTableNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "simJunior",
+      "userLogedName": "Thales",
+      "simulatorStatus": "FECHADO",
+      "id": 10
     }
   ],
   "simulatorsAdded": [
@@ -399,5 +542,36 @@
       "id": 2
     }
   ],
-  "classes": []
+  "classes": [
+    {
+      "name": "Cetoacidose Diabética",
+      "textHeader": "",
+      "classMaterial": [
+        {
+          "item": "ug",
+          "quantity": "67"
+        }
+      ],
+      "classSimulators": [],
+      "classStorage": [],
+      "id": 1
+    },
+    {
+      "name": "Sepse",
+      "textHeader": "",
+      "classMaterial": [
+        {
+          "item": "one",
+          "quantity": "10"
+        },
+        {
+          "item": "two",
+          "quantity": "11"
+        }
+      ],
+      "classSimulators": [],
+      "classStorage": [],
+      "id": 2
+    }
+  ]
 }

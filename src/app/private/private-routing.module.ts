@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ClassesKitComponent } from './classes/classes-kit/classes-kit.component';
 import { ClassesComponent } from './classes/classes.component';
 import { HomeComponent } from './home/home.component';
 import { PrivateComponent } from './private.component';
@@ -36,7 +37,12 @@ const routes: Routes = [
       },
       {
         path: 'aulas',
-        component: ClassesComponent
+        component: ClassesComponent,
+       
+      },
+      {
+        path: 'aulas/:id',
+        component: ClassesKitComponent
       }
     
     ]
