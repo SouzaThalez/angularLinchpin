@@ -35,6 +35,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatListModule} from '@angular/material/list';
 import { KitConfirmModalComponent } from './modals/kit-confirm-modal/kit-confirm-modal.component';
 import { HistoryComponent } from './history/history.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar'
 
 
 
@@ -81,7 +82,8 @@ import { HistoryComponent } from './history/history.component';
     MatTabsModule,
     MatCardModule,
     MatCheckboxModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule
   ]
 })
 export class PrivateModule { }

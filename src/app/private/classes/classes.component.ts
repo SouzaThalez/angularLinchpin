@@ -4,6 +4,7 @@ import { MatTabLabelWrapper } from '@angular/material/tabs';
 import { elementAt } from 'rxjs';
 import {Classes, Material,MaterialAdded, Simulator, tableMaterialFormData, tableSimulatorsFormData} from 'src/app/database';
 import { AppService } from 'src/app/services/app.service';
+import { MatSnackBar,MatSnackBarHorizontalPosition,MatSnackBarVerticalPosition} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-classes',
@@ -28,8 +29,15 @@ export class ClassesComponent implements OnInit{
   selectedSimulator: any;
   userLoged: any;
   userRoleSelection = false;
+// MatsnackBAR CONFIGURATION
+horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+verticalPosition: MatSnackBarVerticalPosition = 'top';
+durationInSeconds = 2;
 
-  constructor( private httpClient: HttpClient, public appService: AppService){}
+  constructor( 
+            private httpClient: HttpClient,
+            public appService: AppService,
+            private snackBar:MatSnackBar){}
   
 
   
@@ -92,7 +100,13 @@ export class ClassesComponent implements OnInit{
       //this.classesNames.push(className);
       //console.log('classes names',this.classesNames);
       this.postClassesToJson(newClass);
-      alert('Nova Aula adicionada!');
+      
+      this.snackBar.open('Aula adicionada!!', 'Fechar',{
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+        duration: this.durationInSeconds * 1000
+      });
+
       this.ngOnInit();
 
     }

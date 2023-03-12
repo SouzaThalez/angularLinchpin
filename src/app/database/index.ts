@@ -84,6 +84,7 @@ export class formuData{
   simulatorName: string;
   userLogedName: string;
   simulatorStatus: string;
+  textArea: string;
 
   constructor(){
     this.formValues = [];
@@ -93,6 +94,7 @@ export class formuData{
     this.simulatorName = '';
     this.userLogedName = '';
     this.simulatorStatus = '';
+    this.textArea = '';
   }
 }
 

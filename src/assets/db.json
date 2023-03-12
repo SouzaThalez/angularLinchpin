@@ -61,21 +61,91 @@
   "formData": [
     {
       "formValues": [
-        "iukyu",
-        "2023-02-24T03:00:00.000Z",
-        "Pulso Fraco",
-        "Pulso Fraco",
-        "Pulso Fraco",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Nenhuma Falha",
         "Parou de Funcionar",
         "Nenhuma Falha",
         "Parou de Funcionar",
         "Parou de Funcionar",
         "Parou de Funcionar",
-        "Nenhuma Falha",
+        "Parou de Funcionar",
         "Parou de Funcionar"
       ],
-      "formDate": "2023-02-24T03:00:00.000Z",
-      "formCode": "iukyu",
+      "formDate": "2023-03-16T03:00:00.000Z",
+      "formCode": [
+        "3GMA01"
+      ],
+      "formTableNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "simMan3G",
+      "userLogedName": "Kenia",
+      "simulatorStatus": "PENDENTE",
+      "textArea": "",
+      "id": 1
+    },
+    {
+      "formValues": [
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-03-22T03:00:00.000Z",
+      "formCode": [
+        "NEB300"
+      ],
+      "formTableNames": [
+        "Carotideo Direito",
+        "Carotideo Esquerdo",
+        "Radial direito",
+        "Braqueal direito",
+        "Aparelho de medir Pressão",
+        "Incursões Respiratórias",
+        "Eletrodos para Monitorização",
+        "Bordas de Choque Elétrico",
+        "Ausculta Cardiaca",
+        "Ausculta Pulmonar"
+      ],
+      "simulatorName": "simNewB",
+      "userLogedName": "Kenia",
+      "simulatorStatus": "FECHADO",
+      "textArea": "cececeqqeq",
+      "id": 2
+    },
+    {
+      "formValues": [
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Nenhuma Falha",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
+        "Faltam Bordas",
+        "Parou de Funcionar",
+        "Parou de Funcionar"
+      ],
+      "formDate": "2023-03-23T03:00:00.000Z",
+      "formCode": [
+        "NEB300"
+      ],
       "formTableNames": [
         "Carotideo Direito",
         "Carotideo Esquerdo",
@@ -90,93 +160,26 @@
       ],
       "simulatorName": "simNewB",
       "simulatorStatus": "ABERTO",
-      "id": 1
-    },
-    {
-      "formValues": [
-        "123232",
-        "2023-02-01T03:00:00.000Z",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Nenhuma Falha",
-        "Parou de Funcionar",
-        "Nenhuma Falha",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar"
-      ],
-      "formDate": "2023-02-01T03:00:00.000Z",
-      "formCode": "123232",
-      "formTableNames": [
-        "Carotideo Direito",
-        "Carotideo Esquerdo",
-        "Radial direito",
-        "Braqueal direito",
-        "Aparelho de medir Pressão",
-        "Incursões Respiratórias",
-        "Eletrodos para Monitorização",
-        "Bordas de Choque Elétrico",
-        "Ausculta Cardiaca",
-        "Ausculta Pulmonar"
-      ],
-      "simulatorName": "simJunior",
-      "userLogedName": "Taline",
-      "simulatorStatus": "ABERTO",
-      "id": 2
-    },
-    {
-      "formValues": [
-        "23ff2F",
-        "2023-02-01T03:00:00.000Z",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar"
-      ],
-      "formDate": "2023-02-01T03:00:00.000Z",
-      "formCode": "23ff2F",
-      "formTableNames": [
-        "Carotideo Direito",
-        "Carotideo Esquerdo",
-        "Radial direito",
-        "Braqueal direito",
-        "Aparelho de medir Pressão",
-        "Incursões Respiratórias",
-        "Eletrodos para Monitorização",
-        "Bordas de Choque Elétrico",
-        "Ausculta Cardiaca",
-        "Ausculta Pulmonar"
-      ],
-      "simulatorName": "simMan3G",
-      "userLogedName": "Thales",
-      "simulatorStatus": "ABERTO",
+      "textArea": "swswswswsw",
       "id": 3
     },
     {
       "formValues": [
-        "opreye",
-        "2023-02-02T03:00:00.000Z",
+        "Parou de Funcionar",
+        "Parou de Funcionar",
         "Pulso Fraco",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
+        "Pulso Fraco",
+        "Nenhuma Falha",
         "Parou de Funcionar",
         "Parou de Funcionar",
         "Parou de Funcionar",
         "Parou de Funcionar",
         "Parou de Funcionar"
       ],
-      "formDate": "2023-02-02T03:00:00.000Z",
-      "formCode": "opreye",
+      "formDate": "2023-03-25T03:00:00.000Z",
+      "formCode": [
+        "NEB300"
+      ],
       "formTableNames": [
         "Carotideo Direito",
         "Carotideo Esquerdo",
@@ -189,104 +192,27 @@
         "Ausculta Cardiaca",
         "Ausculta Pulmonar"
       ],
-      "simulatorName": "simMan3G",
-      "userLogedName": "Thales",
+      "simulatorName": "simNewB",
       "simulatorStatus": "ABERTO",
+      "textArea": "ewdwedw",
       "id": 4
     },
     {
       "formValues": [
-        "482200",
-        "2023-02-23T03:00:00.000Z",
         "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Pulso Fraco",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Faltam Eletrodos",
-        "Nenhuma Falha",
-        "Parou de Funcionar",
-        "Parou de Funcionar"
-      ],
-      "formDate": "2023-02-23T03:00:00.000Z",
-      "formCode": [
-        "482200",
-        "0"
-      ],
-      "formTableNames": [
-        "Carotideo Direito",
-        "Carotideo Esquerdo",
-        "Radial direito",
-        "Braqueal direito",
-        "Aparelho de medir Pressão",
-        "Incursões Respiratórias",
-        "Eletrodos para Monitorização",
-        "Bordas de Choque Elétrico",
-        "Ausculta Cardiaca",
-        "Ausculta Pulmonar"
-      ],
-      "simulatorName": "SimBaby",
-      "userLogedName": "Thales",
-      "simulatorStatus": "FECHADO",
-      "id": 5
-    },
-    {
-      "formValues": [
-        "weq344",
-        "2023-02-22T03:00:00.000Z",
-        "Pulso Fraco",
-        "Pulso Fraco",
-        "Pulso Fraco",
-        "Pulso Fraco",
         "Parou de Funcionar",
         "Nenhuma Falha",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Nenhuma Falha"
-      ],
-      "formDate": "2023-02-22T03:00:00.000Z",
-      "formCode": [
-        "weq344",
-        "1"
-      ],
-      "formTableNames": [
-        "Carotideo Direito",
-        "Carotideo Esquerdo",
-        "Radial direito",
-        "Braqueal direito",
-        "Aparelho de medir Pressão",
-        "Incursões Respiratórias",
-        "Eletrodos para Monitorização",
-        "Bordas de Choque Elétrico",
-        "Ausculta Cardiaca",
-        "Ausculta Pulmonar"
-      ],
-      "simulatorName": "ressusciAnne",
-      "userLogedName": "Kenia",
-      "simulatorStatus": "ABERTO",
-      "id": 6
-    },
-    {
-      "formValues": [
-        "HGJOKD",
-        "2023-03-22T03:00:00.000Z",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
+        "Nenhuma Falha",
         "Parou de Funcionar",
         "Parou de Funcionar",
         "Parou de Funcionar"
       ],
-      "formDate": "2023-03-22T03:00:00.000Z",
+      "formDate": "2023-03-30T03:00:00.000Z",
       "formCode": [
-        "HGJOKD",
-        "1"
+        "ALSCFG"
       ],
       "formTableNames": [
         "Carotideo Direito",
@@ -302,128 +228,16 @@
       ],
       "simulatorName": "simManALs",
       "userLogedName": "Thales",
-      "simulatorStatus": "FECHADO",
-      "id": 7
-    },
-    {
-      "formValues": [
-        "123232",
-        "2023-03-23T03:00:00.000Z",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Pulso Fraco",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar"
-      ],
-      "formDate": "2023-03-23T03:00:00.000Z",
-      "formCode": [
-        "123232",
-        "1"
-      ],
-      "formTableNames": [
-        "Carotideo Direito",
-        "Carotideo Esquerdo",
-        "Radial direito",
-        "Braqueal direito",
-        "Aparelho de medir Pressão",
-        "Incursões Respiratórias",
-        "Eletrodos para Monitorização",
-        "Bordas de Choque Elétrico",
-        "Ausculta Cardiaca",
-        "Ausculta Pulmonar"
-      ],
-      "simulatorName": "simJunior",
-      "userLogedName": "Thales",
       "simulatorStatus": "ABERTO",
-      "id": 8
-    },
-    {
-      "formValues": [
-        "Parou de Funcionar",
-        "Pulso Fraco",
-        "Pulso Fraco",
-        "Parou de Funcionar",
-        "Nenhuma Falha",
-        "Nenhuma Falha",
-        "Nenhuma Falha",
-        "Nenhuma Falha",
-        "Parou de Funcionar",
-        "Parou de Funcionar"
-      ],
-      "formDate": "2023-03-11T03:00:00.000Z",
-      "formCode": [
-        "5643",
-        "0"
-      ],
-      "formTableNames": [
-        "Carotideo Direito",
-        "Carotideo Esquerdo",
-        "Radial direito",
-        "Braqueal direito",
-        "Aparelho de medir Pressão",
-        "Incursões Respiratórias",
-        "Eletrodos para Monitorização",
-        "Bordas de Choque Elétrico",
-        "Ausculta Cardiaca",
-        "Ausculta Pulmonar"
-      ],
-      "simulatorName": "nurseAnne",
-      "simulatorStatus": "FECHADO",
-      "id": 9
-    },
-    {
-      "formValues": [
-        "Parou de Funcionar",
-        "Pulso Fraco",
-        "Pulso Fraco",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Nenhuma Falha",
-        "Nenhuma Falha",
-        "Parou de Funcionar",
-        "Parou de Funcionar",
-        "Parou de Funcionar"
-      ],
-      "formDate": "2023-03-16T03:00:00.000Z",
-      "formCode": [
-        "123232",
-        "1"
-      ],
-      "formTableNames": [
-        "Carotideo Direito",
-        "Carotideo Esquerdo",
-        "Radial direito",
-        "Braqueal direito",
-        "Aparelho de medir Pressão",
-        "Incursões Respiratórias",
-        "Eletrodos para Monitorização",
-        "Bordas de Choque Elétrico",
-        "Ausculta Cardiaca",
-        "Ausculta Pulmonar"
-      ],
-      "simulatorName": "simJunior",
-      "userLogedName": "Thales",
-      "simulatorStatus": "FECHADO",
-      "id": 10
+      "textArea": "Simulador com a pele da face rasgada",
+      "id": 5
     }
   ],
   "simulatorsAdded": [
     {
       "simulatorName": "simManALs",
       "simulatorCodes": [
-        "ALSCFG",
-        "HGJOKD",
-        "dedede",
-        "dedede",
-        "eded",
-        "dw",
-        "213123",
-        "wqgwg"
+        "ALSCFG"
       ],
       "simulatorImgPath": "assets/imgs/Simuladores/SimManALS.jpeg",
       "newCode": "ALSCFG",
@@ -433,10 +247,7 @@
     {
       "simulatorName": "simMan3G",
       "simulatorCodes": [
-        "ju",
-        "kilool",
-        "opreye",
-        "23ff2F"
+        "3GMA01"
       ],
       "simulatorImgPath": "assets/imgs/Simuladores/SIM3G.jpeg",
       "newCode": "ki",
@@ -446,8 +257,7 @@
     {
       "simulatorName": "simJunior",
       "simulatorCodes": [
-        "cayle1",
-        "123232"
+        "JUN302"
       ],
       "simulatorImgPath": "assets/imgs/Simuladores/simJunior.jpeg",
       "newCode": "cayle1",
@@ -457,8 +267,8 @@
     {
       "simulatorName": "nurseAnne",
       "simulatorCodes": [
-        "5643",
-        "wftqwf"
+        "NUR4GH",
+        "NUR7GH"
       ],
       "simulatorImgPath": "assets/imgs/Simuladores/nurseAnne.jpeg",
       "newCode": "5643",
@@ -468,9 +278,10 @@
     {
       "simulatorName": "megaCodeKid",
       "simulatorCodes": [
-        "qqw213",
-        "pl242",
-        "weqdD4"
+        "Kid88Q",
+        "Kid37Q",
+        "Kid23Q",
+        "Kid34Q"
       ],
       "simulatorImgPath": "assets/imgs/Simuladores/megaKid.jpeg",
       "newCode": "qqw213",
@@ -479,9 +290,10 @@
     {
       "simulatorName": "ressusciAnne",
       "simulatorCodes": [
-        "pete24",
-        "weq344",
-        "FEEEFE"
+        "ANNE34",
+        "ANNE55",
+        "ANNE23",
+        "ANNE44"
       ],
       "simulatorImgPath": "assets/imgs/Simuladores/RessuciAnne.jpg",
       "newCode": "pete24",
@@ -490,7 +302,7 @@
     {
       "simulatorName": "simNewB",
       "simulatorCodes": [
-        "iukyu"
+        "NEB300"
       ],
       "simulatorImgPath": "assets/imgs/Simuladores/SimNewb.jpeg",
       "newCode": "iukyu",
@@ -499,8 +311,7 @@
     {
       "simulatorName": "SimBaby",
       "simulatorCodes": [
-        "482200",
-        "85FRWD"
+        "BABY32"
       ],
       "simulatorImgPath": "assets/imgs/Simuladores/simBaby.jpeg",
       "newCode": "482200",
@@ -544,108 +355,275 @@
   ],
   "classes": [
     {
-      "name": "Cetoacidose Diabética",
+      "name": "Dispineia Pneumotorax",
       "textHeader": "",
       "classMaterial": [
+        {
+          "item": "Luvas de procedimento",
+          "quantity": "15 uni"
+        },
         {
           "item": "Luvas Estéreis",
           "quantity": "15 uni"
         },
         {
-          "item": "luvas de procedimento",
+          "item": "gaze",
           "quantity": "15 uni"
         },
         {
-          "item": "seringas 10ml ",
+          "item": "Campo Cirurgico",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Solução Degermante",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Pinças para Antissepsia",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Agulha 25x7",
           "quantity": "15 uni"
         },
         {
-          "item": "seringas 20ml",
+          "item": "Agulha 40x12",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Seringa 10ml",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Seringa 20ml",
           "quantity": "15 uni"
         }
       ],
       "classSimulators": [
         {
-          "name": "Mega Code Kelly",
-          "quantity": "1"
+          "name": "Modelo Drenagem Toráxica",
+          "quantity": "2 uni"
+        },
+        {
+          "name": "Braço punção Venosa",
+          "quantity": "1 uni"
+        },
+        {
+          "name": "Ressusci Anne",
+          "quantity": "1 uni"
         }
       ],
       "classStorage": [],
       "id": 1
     },
     {
-      "name": "Sepse",
+      "name": "Animais Peçonhentos Anafilaxia",
       "textHeader": "",
       "classMaterial": [
         {
-          "item": "one",
-          "quantity": "10"
-        },
-        {
-          "item": "two",
-          "quantity": "11"
-        },
-        {
-          "item": "three",
+          "item": "Luvas de procedimento",
           "quantity": "15 uni"
-        }
-      ],
-      "classSimulators": [],
-      "classStorage": [],
-      "id": 2
-    }
-  ],
-  "classesKit": [
-    {
-      "kitName": "Cetoacidose Diabética",
-      "material": [
+        },
         {
           "item": "Luvas Estéreis",
           "quantity": "15 uni"
         },
         {
-          "item": "luvas de procedimento",
+          "item": "gaze",
           "quantity": "15 uni"
         },
         {
-          "item": "seringas 10ml ",
+          "item": "Campo Cirurgico",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Solução Degermante",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Pinças para Antissepsia",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Agulha 25x7",
           "quantity": "15 uni"
+        },
+        {
+          "item": "Agulha 40x12",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Seringa 10ml",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Seringa 20ml",
+          "quantity": "15 uni"
+        }
+      ],
+      "classSimulators": [
+        {
+          "name": "Braço punção Venosa",
+          "quantity": "1 uni"
+        },
+        {
+          "name": "Ressusci Anne",
+          "quantity": "1 uni"
+        }
+      ],
+      "classStorage": [],
+      "id": 2
+    },
+    {
+      "name": "Cetoacidose Diabética",
+      "textHeader": "",
+      "classMaterial": [
+        {
+          "item": "Luvas de procedimento",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Luvas Estéreis",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "gaze",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Campo Cirurgico",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Solução Degermante",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Pinças para Antissepsia",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Agulha 25x7",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Agulha 40x12",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Seringa 10ml",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Seringa 20ml",
+          "quantity": "15 uni"
+        }
+      ],
+      "classSimulators": [
+        {
+          "name": "Ressusci Anne",
+          "quantity": "1 uni"
+        },
+        {
+          "name": "Torso Punção Central",
+          "quantity": "1 uni"
+        },
+        {
+          "name": "Sondagem Vesical F/M",
+          "quantity": "1 uni"
+        },
+        {
+          "name": "Monitor Cardiaco",
+          "quantity": "1 uni"
+        }
+      ],
+      "classStorage": [],
+      "id": 3
+    },
+    {
+      "name": "Sepse",
+      "textHeader": "",
+      "classMaterial": [],
+      "classSimulators": [],
+      "classStorage": [],
+      "id": 4
+    }
+  ],
+  "classesKit": [
+    {
+      "kitName": "Dispineia Pneumotorax",
+      "material": [
+        {
+          "item": "Luvas de procedimento",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Campo Cirurgico",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "gaze",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "Solução Degermante",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Pinças para Antissepsia",
+          "quantity": "1 uni"
         }
       ],
       "storageLocal": "20",
-      "userName": "Taline",
+      "userName": "Thales",
       "id": 1
     },
     {
-      "kitName": "Sepse",
+      "kitName": "Animais Peçonhentos Anafilaxia",
       "material": [
         {
-          "item": "two",
-          "quantity": "11"
+          "item": "Luvas de procedimento",
+          "quantity": "15 uni"
         },
         {
-          "item": "three",
+          "item": "Luvas Estéreis",
           "quantity": "15 uni"
+        },
+        {
+          "item": "Campo Cirurgico",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Solução Degermante",
+          "quantity": "1 uni"
         }
       ],
       "storageLocal": "30",
-      "userName": "Taline",
+      "userName": "Kenia",
       "id": 2
     },
     {
       "kitName": "Cetoacidose Diabética",
       "material": [
         {
-          "item": "luvas de procedimento",
+          "item": "Pinças para Antissepsia",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Solução Degermante",
+          "quantity": "1 uni"
+        },
+        {
+          "item": "Agulha 25x7",
           "quantity": "15 uni"
         },
         {
-          "item": "seringas 10ml ",
+          "item": "Agulha 40x12",
           "quantity": "15 uni"
         }
       ],
-      "storageLocal": "20",
-      "userName": "Kenia",
+      "storageLocal": "Bancada",
+      "userName": "Taline",
       "id": 3
     }
   ]

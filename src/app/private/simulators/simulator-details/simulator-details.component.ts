@@ -167,7 +167,9 @@ export class SimulatorDetailsComponent implements OnInit {
       
     });
   }
-  onSubmit(){
+  onSubmit(textAreaElement: any){
+
+   
 
     let count = 0;
     let temporaryForm: any = [];
@@ -225,12 +227,13 @@ export class SimulatorDetailsComponent implements OnInit {
             //alert('Nao existem campos vazios!');
             this.openSucessModal(true,false);
             
-              formData.formCode.push(this.simulatorCode,this.matOptionElementIndex);
+              formData.formCode.push(this.simulatorCode);
               formData.formTableNames = this.tableNames;
               formData.formDate = this.dateInput;
               formData.simulatorName = this.simulator.simulatorName;
               formData.userLogedName = this.userLoged;
               formData.simulatorStatus = 'ABERTO';
+              formData.textArea = textAreaElement.value;
               this.httpClient.post('http://localhost:3000/formData',formData)
               .subscribe({
                   next:(sample: any)=>{
@@ -258,6 +261,7 @@ export class SimulatorDetailsComponent implements OnInit {
               this.bordasChoqueValue = null ;
               this.auscultaCardiacaValue = null;
               this.auscultaPulmonarValue = null;
+              textAreaElement.value = null;
             break;
           default:
             this.openSucessModal(false,true);

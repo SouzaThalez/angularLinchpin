@@ -5,12 +5,12 @@
             <div class="row">
                 <div class="col-6 left-colum">
                     <section class="example-section">
-                        <p>Preparo</p>
+                        <p><strong>Preparo</strong></p>
                         <p *ngFor="let checkbox of classeFromJson.classMaterial"><mat-checkbox #checkBoxProperty (change)="changeFunction(checkbox,checkBoxProperty.checked)" class="example-margin">{{checkbox.item}}</mat-checkbox></p>
                       </section>
                 </div>
                 <div class="col-6 right-colum">
-                    <p>Seu kit</p>
+                    <p><strong>Seu kit</strong></p>
                     <mat-list role="list">
                         <mat-list-item role="listitem" *ngFor="let element of checkBoxesSelected">
                             <span matListItemTitle>{{element.item}}</span>

@@ -191,14 +191,14 @@
         <p>Outros Relatos</p>
         <mat-form-field class="example-full-width">
           <mat-label>Relate outras intercorrencias...</mat-label>
-          <textarea matInput></textarea>
+          <textarea matInput #textArea></textarea>
         </mat-form-field>
 
 
         <div class="gerar-relatorio-btn-container">
             <div class="btns-relatorio">
                 <button mat-raised-button routerLink="/private/simuladores">Voltar</button>
-                <button mat-raised-button color="primary" class="form-generate-btn" (click)="onSubmit()">Gerar Relatorio</button>
+                <button mat-raised-button color="primary" class="form-generate-btn" (click)="onSubmit(textArea)">Gerar Relatorio</button>
                 
             </div>
         </div>

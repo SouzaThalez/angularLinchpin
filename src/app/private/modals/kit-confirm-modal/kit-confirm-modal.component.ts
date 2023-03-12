@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar,MatSnackBarHorizontalPosition,MatSnackBarVerticalPosition} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-kit-confirm-modal',
@@ -9,10 +10,22 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class KitConfirmModalComponent {
 
   storageValue = '';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+  durationInSeconds = 2;
 
-    constructor(public dialogRef: MatDialogRef<KitConfirmModalComponent>){}
+    constructor(
+          private snackBar:MatSnackBar,
+          public dialogRef: MatDialogRef<KitConfirmModalComponent>
+          ){}
 
     getKitModal(){
       this.dialogRef.close(this.storageValue);
+
+      this.snackBar.open('Seu kit Montado!!', 'Fechar',{
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+        duration: this.durationInSeconds * 1000
+      });
     }
 }
