@@ -96,9 +96,6 @@ export class formuData{
   }
 }
 
-
-
-
 export class Classes{
   name: string;
   textHeader: string;
@@ -129,6 +126,19 @@ export class Simulator{
   constructor(){
     this.name = '';
     this.quantity = 0;
+  }
+}
+export class ClassKit{
+  kitName: string;
+  material: Array<any>;
+  storageLocal: string;
+  userName: string;
+
+  constructor(){
+    this.kitName = '';
+    this.material = [];
+    this.storageLocal = '';
+    this.userName = '';
   }
 }
 

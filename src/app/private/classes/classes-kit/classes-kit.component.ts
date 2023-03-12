@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { KitConfirmModalComponent } from '../../modals/kit-confirm-modal/kit-confirm-modal.component';
+import { ClassKit} from 'src/app/database';
+import { resetFakeAsyncZone } from '@angular/core/testing';
+import { AppService } from 'src/app/services/app.service';
 
 
 @Component({
@@ -13,12 +16,13 @@ import { KitConfirmModalComponent } from '../../modals/kit-confirm-modal/kit-con
 export class ClassesKitComponent implements OnInit{
 
   classeFromJson: any;
-  checkBoxesSelected: any [] = [];
+  checkBoxesSelected: any[]=[];
 
   constructor(
       private activatedRoute: ActivatedRoute,
       private httpClient: HttpClient,
-      public dialog: MatDialog
+      public dialog: MatDialog,
+      private appService: AppService
     ){}
 
   ngOnInit(): void {
@@ -53,6 +57,7 @@ export class ClassesKitComponent implements OnInit{
       // get the index of the element to remove and than splice 
       let indexOfCheckBox = this.checkBoxesSelected.indexOf(checkBoxElement);
       this.checkBoxesSelected.splice(indexOfCheckBox,1);
+
       //console.log('checkbooxesRemoved:',this.checkBoxesSelected);
       break;
    
@@ -63,19 +68,36 @@ export class ClassesKitComponent implements OnInit{
   }
 
   openDialog(): void {
+
+    let newKit = new ClassKit();
+
     const dialogRef = this.dialog.open(KitConfirmModalComponent, {  
     });
+
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');      
+      newKit.kitName = this.classeFromJson.name;
+      newKit.storageLocal = result;
+      newKit.material = this.checkBoxesSelected;
+      newKit.userName = this.appService.logedUser.name;
+      console.log(newKit);
+      this.postToJSON(newKit);     
     });
   }
 
+  postToJSON(object: any){
 
+    this.httpClient.post('http://localhost:3000/classesKit',object)
+    .subscribe({
+      next: (sample: any) =>{
+        console.log('POST to classKit is working',sample);
+      },
+      error: (erro)=>{
+        console.log('POST to classKit NOT working ', erro);
+      }
 
-
-  getKit(){
-    console.log('your kit has:',this.checkBoxesSelected);
+    })
   }
+
 
 
 

@@ -594,5 +594,59 @@
       "classStorage": [],
       "id": 2
     }
+  ],
+  "classesKit": [
+    {
+      "kitName": "Cetoacidose Diabética",
+      "material": [
+        {
+          "item": "Luvas Estéreis",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "luvas de procedimento",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "seringas 10ml ",
+          "quantity": "15 uni"
+        }
+      ],
+      "storageLocal": "20",
+      "userName": "Taline",
+      "id": 1
+    },
+    {
+      "kitName": "Sepse",
+      "material": [
+        {
+          "item": "two",
+          "quantity": "11"
+        },
+        {
+          "item": "three",
+          "quantity": "15 uni"
+        }
+      ],
+      "storageLocal": "30",
+      "userName": "Taline",
+      "id": 2
+    },
+    {
+      "kitName": "Cetoacidose Diabética",
+      "material": [
+        {
+          "item": "luvas de procedimento",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "seringas 10ml ",
+          "quantity": "15 uni"
+        }
+      ],
+      "storageLocal": "20",
+      "userName": "Kenia",
+      "id": 3
+    }
   ]
 }

@@ -36,9 +36,5 @@ export class SidePanelComponent implements OnInit{
       
     });
   }
-  
-  openSimulatorsHistory(){
-    console.log('simulators History opend!');
-  }
 
 }

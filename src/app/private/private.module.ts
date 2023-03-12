@@ -34,6 +34,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatListModule} from '@angular/material/list';
 import { KitConfirmModalComponent } from './modals/kit-confirm-modal/kit-confirm-modal.component';
+import { HistoryComponent } from './history/history.component';
 
 
 
@@ -57,6 +58,7 @@ import { KitConfirmModalComponent } from './modals/kit-confirm-modal/kit-confirm
     ClassesComponent,
     ClassesKitComponent,
     KitConfirmModalComponent,
+    HistoryComponent,
   ],
   imports: [
     CommonModule,

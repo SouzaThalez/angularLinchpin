@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClassesKitComponent } from './classes/classes-kit/classes-kit.component';
 import { ClassesComponent } from './classes/classes.component';
+import { HistoryComponent } from './history/history.component';
 import { HomeComponent } from './home/home.component';
 import { PrivateComponent } from './private.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
@@ -43,6 +44,10 @@ const routes: Routes = [
       {
         path: 'aulas/:id',
         component: ClassesKitComponent
+      },
+      {
+        path:'historico',
+        component: HistoryComponent
       }
     
     ]
