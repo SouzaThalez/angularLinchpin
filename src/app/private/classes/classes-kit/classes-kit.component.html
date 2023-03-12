@@ -1,4 +1,4 @@
-<p>Aula de {{classeFromJson.name}}</p>
+<h2>Aula de {{classeFromJson.name}}</h2>
 <mat-card>
     <mat-card-content>
         <div class="container">
@@ -6,20 +6,23 @@
                 <div class="col-6 left-colum">
                     <section class="example-section">
                         <p>Preparo</p>
-                        <p *ngFor="let checkbox of classeFromJson.classMaterial"><mat-checkbox (change)="changeFunction()" class="example-margin">{{checkbox.item}}</mat-checkbox></p>
+                        <p *ngFor="let checkbox of classeFromJson.classMaterial"><mat-checkbox #checkBoxProperty (change)="changeFunction(checkbox,checkBoxProperty.checked)" class="example-margin">{{checkbox.item}}</mat-checkbox></p>
                       </section>
                 </div>
                 <div class="col-6 right-colum">
                     <p>Seu kit</p>
                     <mat-list role="list">
-                        <mat-list-item role="listitem">Item 1</mat-list-item>
-                        <mat-list-item role="listitem">Item 2</mat-list-item>
-                        <mat-list-item role="listitem">Item 3</mat-list-item>
-                      </mat-list>
+                        <mat-list-item role="listitem" *ngFor="let element of checkBoxesSelected">
+                            <span matListItemTitle>{{element.item}}</span>
+                            <span matListItemLine>Quantidade: {{element.quantity}}</span>
+                        </mat-list-item>
+                    </mat-list>
                 </div>
             </div>
         </div>
-        <button mat-flat-button routerLink="/private/aulas" class="confirm-kit">Voltar</button>
-        <button mat-raised-button class="confirm-kit">Confirmar kit</button>
+        <div class="kit-btns">
+            <button mat-stroked-button routerLink="/private/aulas" class="confirm-kit">Voltar</button>
+            <button mat-raised-button class="confirm-kit" (click)="getKit()">Confirmar kit</button>
+        </div>
     </mat-card-content> 
 </mat-card>

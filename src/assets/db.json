@@ -89,7 +89,7 @@
         "Ausculta Pulmonar"
       ],
       "simulatorName": "simNewB",
-      "simulatorStatus": "FECHADO",
+      "simulatorStatus": "ABERTO",
       "id": 1
     },
     {
@@ -548,11 +548,28 @@
       "textHeader": "",
       "classMaterial": [
         {
-          "item": "ug",
-          "quantity": "67"
+          "item": "Luvas Estéreis",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "luvas de procedimento",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "seringas 10ml ",
+          "quantity": "15 uni"
+        },
+        {
+          "item": "seringas 20ml",
+          "quantity": "15 uni"
         }
       ],
-      "classSimulators": [],
+      "classSimulators": [
+        {
+          "name": "Mega Code Kelly",
+          "quantity": "1"
+        }
+      ],
       "classStorage": [],
       "id": 1
     },
@@ -567,6 +584,10 @@
         {
           "item": "two",
           "quantity": "11"
+        },
+        {
+          "item": "three",
+          "quantity": "15 uni"
         }
       ],
       "classSimulators": [],

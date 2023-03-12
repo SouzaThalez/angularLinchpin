@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ClassesKitComponent implements OnInit{
 
   classeFromJson: any;
-
+  checkBoxesSelected: any [] = [];
 
   constructor(
       private activatedRoute: ActivatedRoute,
@@ -33,15 +33,34 @@ export class ClassesKitComponent implements OnInit{
       }
     })
     
-
+    
   }
 
+  changeFunction(checkBoxElement: any,checkBoxState: any){
 
+   switch (checkBoxState) {
+    case true:
+        this.checkBoxesSelected.push(checkBoxElement);
+        //console.log('checkbooxesV: ',this.checkBoxesSelected);
+      break;
+    case false:
+      //console.log('false!',checkBoxElement.item);
+      //using two array methods for removing element 
+      // splice() method  and the indexOf() method
+      // get the index of the element to remove and than splice 
+      let indexOfCheckBox = this.checkBoxesSelected.indexOf(checkBoxElement.item);
+      this.checkBoxesSelected.splice(indexOfCheckBox,1);
+      //console.log('checkbooxesRemoved:',this.checkBoxesSelected);
+      break;
+   
+    default:
+      break;
+   }
 
-  changeFunction(){
-    console.log('omdoemodeomd');
   }
-
+  getKit(){
+    console.log('your kit has:',this.checkBoxesSelected);
+  }
 
 
 

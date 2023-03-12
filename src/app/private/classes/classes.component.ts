@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTabLabelWrapper } from '@angular/material/tabs';
 import { elementAt } from 'rxjs';
 import {Classes, Material,MaterialAdded, Simulator, tableMaterialFormData, tableSimulatorsFormData} from 'src/app/database';
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'app-classes',
@@ -14,7 +15,6 @@ export class ClassesComponent implements OnInit{
 //global html variables!
   panelOpenState = false;
   tableMaterialNames: any[] =['item','quantity'];
-  //classesNames: any[] = [];
   tableItems: any;
   classesFromJson: any;
   simulatorTable: any;
@@ -26,9 +26,10 @@ export class ClassesComponent implements OnInit{
   inputPeriodName = '';
 // new simulator selected input
   selectedSimulator: any;
+  userLoged: any;
+  userRoleSelection = false;
 
-
-  constructor( private httpClient: HttpClient){}
+  constructor( private httpClient: HttpClient, public appService: AppService){}
   
 
   
@@ -41,14 +42,36 @@ export class ClassesComponent implements OnInit{
       .subscribe({
         //if request is true
           next: (sample: any)=>{
-            console.log('class request  ok: ',sample);
+            console.log('class request  ok!: ',sample);
              this.classesFromJson = sample;
           },
         //if request is false
           error: (erro)=>{console.log('class request  is NOT good: ',erro);}
       })
 
-      
+    //getting id user from local storage
+    let userID = localStorage.getItem('userID') as any;
+    this.httpClient.get('http://localhost:3000/users/'+ userID).subscribe({
+      next:(sample: any)=>{
+        console.log('coming from local: ',sample);
+        this.userLoged = sample;
+
+        switch(this.userLoged.role){
+          case'admin':
+          this.userRoleSelection = true;
+          break
+          case'user':
+          this.userRoleSelection = false;
+          break
+
+        }
+      },
+      error:(error)=>{console.log('not good request',error)}
+    })
+  
+  
+   
+    
 
   }
 
@@ -165,15 +188,7 @@ export class ClassesComponent implements OnInit{
 
   }
   
-
-
-
-
-
-
-
 // END POINTS REQUESTS!
-
   getClassesFromJson(position: any){
 
     this.httpClient.get('http://localhost:3000/classes/'+ position)

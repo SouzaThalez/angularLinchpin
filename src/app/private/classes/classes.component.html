@@ -1,4 +1,4 @@
-<div class="container first-container">
+<div *ngIf="userRoleSelection" class="container first-container">
     <div class="row">
         <div class="col-3 add-th">
             <p>Novo TH</p>
@@ -65,7 +65,6 @@
     </div>
 </div>
 
-
 <div class="container second-container">
     <div class="row">
         <div class="col-3 side-colum">
@@ -74,7 +73,6 @@
                 <button class="classes-btns" mat-stroked-button>Aulas TH7</button>
                 <button class="classes-btns" mat-stroked-button>Aulas TH8</button>
             </div>
-           
         </div>
         <div class="col-9 main-colum">
             <p>Montagem da Aula</p>

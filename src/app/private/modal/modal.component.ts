@@ -16,7 +16,7 @@ import { SimulatorsComponent } from '../simulators/simulators.component';
 })
 export class ModalComponent{
  
- constructor(private httpClient: HttpClient , private appService: AppService){}
+ constructor(private httpClient: HttpClient){}
 
     //Coming from ngModel
     selectedSimulator: any ; 

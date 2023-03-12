@@ -36,6 +36,7 @@ export class StatusComponent implements OnInit{
           error:(erroSample)=>{console.log('ERRO na requisicao!',erroSample)}
 
       });
+      
       let userRole = this.appService.logedUser.role;
       switch (userRole) {
         case 'admin':
@@ -86,9 +87,6 @@ export class StatusComponent implements OnInit{
     }
     
   }
-
-
-
 
   putEndpont(jsonPosition: any,object:any){
     this.httpClient.put('http://localhost:3000/formData/'+jsonPosition,object)
