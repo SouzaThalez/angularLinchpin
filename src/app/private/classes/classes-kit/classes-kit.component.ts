@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { KitConfirmModalComponent } from '../../modals/kit-confirm-modal/kit-confirm-modal.component';
 
 
 @Component({
@@ -15,7 +17,8 @@ export class ClassesKitComponent implements OnInit{
 
   constructor(
       private activatedRoute: ActivatedRoute,
-      private httpClient: HttpClient
+      private httpClient: HttpClient,
+      public dialog: MatDialog
     ){}
 
   ngOnInit(): void {
@@ -44,11 +47,11 @@ export class ClassesKitComponent implements OnInit{
         //console.log('checkbooxesV: ',this.checkBoxesSelected);
       break;
     case false:
-      //console.log('false!',checkBoxElement.item);
+      //console.log('false!',checkBoxElement);
       //using two array methods for removing element 
       // splice() method  and the indexOf() method
       // get the index of the element to remove and than splice 
-      let indexOfCheckBox = this.checkBoxesSelected.indexOf(checkBoxElement.item);
+      let indexOfCheckBox = this.checkBoxesSelected.indexOf(checkBoxElement);
       this.checkBoxesSelected.splice(indexOfCheckBox,1);
       //console.log('checkbooxesRemoved:',this.checkBoxesSelected);
       break;
@@ -58,6 +61,18 @@ export class ClassesKitComponent implements OnInit{
    }
 
   }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(KitConfirmModalComponent, {  
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');      
+    });
+  }
+
+
+
+
   getKit(){
     console.log('your kit has:',this.checkBoxesSelected);
   }

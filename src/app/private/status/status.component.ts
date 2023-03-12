@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { formuData } from 'src/app/database';
 import { AppService } from 'src/app/services/app.service';
-import { ViewSimulatorModalComponent } from '../modal/view-simulator-modal/view-simulator-modal.component';
+import { ViewSimulatorModalComponent } from '../modals/view-simulator-modal/view-simulator-modal.component';
 
 @Component({
   selector: 'app-status',

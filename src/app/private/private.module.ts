@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { PrivateRoutingModule } from './private-routing.module';
 import { PrivateComponent } from './private.component';
 import { HomeComponent } from './home/home.component';
-import { ModalComponent } from './modal/modal.component';
-import { SucessModalComponent } from './modal/sucess-modal/sucess-modal.component';
-import { ViewSimulatorModalComponent } from './modal/view-simulator-modal/view-simulator-modal.component';
+import { ModalComponent } from './modals/modal.component';
+import { SucessModalComponent } from './modals/sucess-modal/sucess-modal.component';
+import { ViewSimulatorModalComponent } from './modals/view-simulator-modal/view-simulator-modal.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { SimulatorDetailsComponent } from './simulators/simulator-details/simulator-details.component';
@@ -33,6 +33,7 @@ import { ClassesKitComponent } from './classes/classes-kit/classes-kit.component
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatListModule} from '@angular/material/list';
+import { KitConfirmModalComponent } from './modals/kit-confirm-modal/kit-confirm-modal.component';
 
 
 
@@ -55,6 +56,7 @@ import {MatListModule} from '@angular/material/list';
     SucessModalComponent,
     ClassesComponent,
     ClassesKitComponent,
+    KitConfirmModalComponent,
   ],
   imports: [
     CommonModule,

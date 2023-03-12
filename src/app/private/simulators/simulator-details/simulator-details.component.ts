@@ -8,7 +8,7 @@ import { ActivatedRoute, withRouterConfig } from '@angular/router';
 import { elementAt, findIndex } from 'rxjs';
 import {simulatorsAdded, simulatorsData,formuData } from 'src/app/database';
 import { MatDialog } from '@angular/material/dialog';
-import { SucessModalComponent } from '../../modal/sucess-modal/sucess-modal.component';
+import { SucessModalComponent } from '../../modals/sucess-modal/sucess-modal.component';
 import { AppService } from 'src/app/services/app.service';
 import flatpickr from 'flatpickr';
 
